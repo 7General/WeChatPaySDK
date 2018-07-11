@@ -149,8 +149,7 @@
     }
     
     //添加商户密钥key字段
-    //[contentString appendFormat:@"key=%@", MXWechatPartnerKey];
-    [contentString appendFormat:@"key=%@", @"AbcdefghijklmnopqrstuvwxyZ654321"];
+    [contentString appendFormat:@"key=%@", MXWechatPartnerKey];
     
     NSString *result = [self md5:contentString];
 
