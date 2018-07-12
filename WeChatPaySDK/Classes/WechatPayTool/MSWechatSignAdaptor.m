@@ -7,9 +7,9 @@
  @return MXWechatSignAdaptor（微信签名工具类）
  */
 
-#import "MXWechatSignAdaptor.h"
+#import "MSWechatSignAdaptor.h"
 #import <CommonCrypto/CommonDigest.h>
-#import "MXWechatConfig.h"
+#import "MSWechatConfig.h"
 
 @interface MXWechatSignAdaptor()
 

@@ -7,8 +7,8 @@
  @return MXWechatPayHandler（微信调用工具类）
  */
 
-#import "MXWechatPayHandler.h"
-#import "MXWechatConfig.h"
+#import "MSWechatPayHandler.h"
+#import "MSWechatConfig.h"
 #import "AFNetworking.h"
 
 ///用户获取设备ip地址

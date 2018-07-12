@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WeChatPaySDK'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A short description of WeChatPaySDK.'
   s.description      = <<-DESC
   TODO: Add long description of the pod here.
@@ -21,5 +21,16 @@ Pod::Spec.new do |s|
 
   s.source_files = 'WeChatPaySDK/Classes/**/*'
 
-s.dependency 'AFNetworking'
+  s.dependency 'AFNetworking'
+  
+  ## 模块文件
+  s.subspec "WechatOpenTool" do |wo|
+      wo.source_files = 'WeChatPaySDK/Classes/WechatOpenTool/*.{h,m}'
+  end
+  
+  s.subspec "WechatPayTool" do |wp|
+      wp.source_files = 'WeChatPaySDK/Classes/WechatPayTool/*.{h,m}'
+  end
+  
+  
 end

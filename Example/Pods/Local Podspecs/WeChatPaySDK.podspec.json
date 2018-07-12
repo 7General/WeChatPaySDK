@@ -1,6 +1,6 @@
 {
   "name": "WeChatPaySDK",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "A short description of WeChatPaySDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/7General",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/7General/WeChatPaySDK.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "vendored_libraries": "WeChatPaySDK/Frameworks/libWeChatSDK.a",
   "libraries": [
@@ -37,5 +37,15 @@
     "AFNetworking": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "WechatOpenTool",
+      "source_files": "WeChatPaySDK/Classes/WechatOpenTool/*.{h,m}"
+    },
+    {
+      "name": "WechatPayTool",
+      "source_files": "WeChatPaySDK/Classes/WechatPayTool/*.{h,m}"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "MXWechatConfig.h"
+#import "MSWechatConfig.h"
 
 
 @interface WXApiManager : NSObject<WXApiDelegate>

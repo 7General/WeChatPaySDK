@@ -7,7 +7,7 @@
 //
 
 #import "ZZGAppDelegate.h"
-#import <WeChatPaySDK/MXWechatConfig.h>
+#import <WeChatPaySDK/MSWechatConfig.h>
 
 @implementation ZZGAppDelegate
 

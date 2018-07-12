@@ -7,7 +7,7 @@
 //
 
 #import "ZZGViewController.h"
-#import <WeChatPaySDK/MXWechatConfig.h>
+#import <WeChatPaySDK/MSWechatConfig.h>
 
 @interface ZZGViewController ()
 
