@@ -1,0 +1,1 @@
+../../../../../WeChatPaySDK/Classes/WechatTool/MXWechatSignAdaptor.h
