@@ -7,7 +7,7 @@
 //
 
 #import "ZZGViewController.h"
-#import <WeChatPaySDK/MSWechatConfig.h>
+#import <WeChatPaySDK/MSWechatPayHelper.h>
 
 @interface ZZGViewController ()
 
@@ -21,7 +21,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [MXWechatPayHandler jumpToWxPay];
+    [MSWechatPayHelper WeChatPayTest];
 }
 
 @end

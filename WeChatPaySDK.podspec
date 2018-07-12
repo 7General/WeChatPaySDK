@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WeChatPaySDK'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A short description of WeChatPaySDK.'
   s.description      = <<-DESC
   TODO: Add long description of the pod here.

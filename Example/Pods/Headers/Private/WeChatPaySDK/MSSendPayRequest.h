@@ -1,0 +1,1 @@
+../../../../../WeChatPaySDK/Classes/WechatPayTool/MSSendPayRequest.h

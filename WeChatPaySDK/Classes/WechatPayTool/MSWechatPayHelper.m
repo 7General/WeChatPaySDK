@@ -7,20 +7,17 @@
  @return MXWechatPayHandler（微信调用工具类）
  */
 
-#import "MSWechatPayHandler.h"
-#import "MSWechatConfig.h"
+#import "MSWechatPayHelper.h"
 #import "AFNetworking.h"
 
 ///用户获取设备ip地址
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
-@implementation MXWechatPayHandler
+@implementation MSWechatPayHelper
 
 #pragma mark - Public Methods
-
-+ (void)jumpToWxPay
-{
++ (void)WeChatPayTest {
     //============================================================
     // 支付流程实现
     // 客户端操作     (实际操作应由服务端操作)
@@ -173,6 +170,30 @@
     //    }];
     
 }
+
++ (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest {
+    PayReq *request = [[PayReq alloc] init];
+    request.openID = payRequest.openID;
+    request.partnerId = payRequest.partnerId;
+    request.prepayId= payRequest.prepayId;
+//    request.package = @"Sign=WXPay";
+    request.package = payRequest.package;
+    request.nonceStr= payRequest.nonceStr;
+    
+    // 将当前时间转化成时间戳
+//    NSDate *datenow = [NSDate date];
+//    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
+//    UInt32 timeStamp =[timeSp intValue];
+//    request.timeStamp= timeStamp;
+    request.timeStamp = payRequest.timeStamp;
+    
+    request.sign= payRequest.sign;
+
+    // 调用微信
+    [WXApi sendReq:request];
+}
+
+
 
 #pragma mark - Private Method
 /**

@@ -11,7 +11,7 @@
 
 #import "WXApi.h"
 #import "WXApiManager.h"
-#import "MSWechatPayHandler.h"  //微信支付调用类
+#import "MSWechatPayHelper.h"  //微信支付调用类
 #import "MSWechatSignAdaptor.h" //微信签名工具类
 #import "XMLDictionary.h"            //XML转换工具类
 
