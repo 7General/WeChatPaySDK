@@ -23,7 +23,6 @@
 }
 
 #pragma mark - 微信支付回调
-
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
