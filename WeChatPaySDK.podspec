@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WeChatPaySDK'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'A short description of WeChatPaySDK.'
   s.description      = <<-DESC
   TODO: Add long description of the pod here.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   
   ## 模块文件
   s.subspec "WechatOpenTool" do |wo|
-      wo.source_files = 'WeChatPaySDK/Classes/WechatOpenTool/*.{h,m}'
+      wo.source_files = 'WeChatPaySDK/Classes/WechatOpenTool/*.*'
   end
 
   
