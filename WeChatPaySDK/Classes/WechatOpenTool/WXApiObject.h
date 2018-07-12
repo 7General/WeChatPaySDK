@@ -2,8 +2,8 @@
 //  MMApiObject.h
 //  Api对象，包含所有接口和对象数据定义
 //
-//  Created by Wechat on 12-2-28.
-//  Copyright (c) 2012年 Tencent. All rights reserved.
+//  Created by 王会洲 on 18-01-12.
+//  Copyright (c) 2013年 GUAGUAG. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

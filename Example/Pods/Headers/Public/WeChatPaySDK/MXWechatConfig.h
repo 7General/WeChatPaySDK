@@ -1,1 +1,1 @@
-../../../../../WeChatPaySDK/Classes/WechatTool/MXWechatConfig.h
+../../../../../WeChatPaySDK/Classes/WechatPayTool/MXWechatConfig.h

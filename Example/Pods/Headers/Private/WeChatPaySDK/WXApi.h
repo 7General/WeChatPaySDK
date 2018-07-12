@@ -1,1 +1,1 @@
-../../../../../WeChatPaySDK/Classes/OpenSDK1.7.4 2/WXApi.h
+../../../../../WeChatPaySDK/Classes/WechatOpenTool/WXApi.h

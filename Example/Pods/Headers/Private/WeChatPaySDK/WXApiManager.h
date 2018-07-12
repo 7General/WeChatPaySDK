@@ -1,1 +1,1 @@
-../../../../../WeChatPaySDK/Classes/WechatTool/WXApiManager.h
+../../../../../WeChatPaySDK/Classes/WechatPayTool/WXApiManager.h

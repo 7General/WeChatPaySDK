@@ -1,9 +1,10 @@
 
 /**
- @@create by 刘智援 2016-11-28
+ @@create by 王会洲 2017-07-12
  
- @简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
- @Github地址: https://github.com/lyoniOS
+ @网址:          http://www.osjoin.com
+ @简书地址:    https://www.jianshu.com/u/1338683b18e0
+ @Github地址: https://github.com/7General
  @return WXApiManager（微信结果回调类）
  */
 

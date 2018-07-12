@@ -2,8 +2,8 @@
 //  WechatAuthSDK.h
 //  WechatAuthSDK
 //
-//  Created by 李凯 on 13-11-29.
-//  Copyright (c) 2013年 Tencent. All rights reserved.
+//  Created by 王会洲 on 18-01-12.
+//  Copyright (c) 2013年 GUAGUAG. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

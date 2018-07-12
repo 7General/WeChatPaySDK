@@ -2,8 +2,8 @@
 //  WXApi.h
 //  所有Api接口
 //
-//  Created by Wechat on 12-2-28.
-//  Copyright (c) 2012年 Tencent. All rights reserved.
+//  Created by 王会洲 on 18-01-12.
+//  Copyright (c) 2013年 GUAGUAG. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

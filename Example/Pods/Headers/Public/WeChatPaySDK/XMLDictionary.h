@@ -1,1 +1,1 @@
-../../../../../WeChatPaySDK/Classes/WechatTool/XMLDictionary/XMLDictionary.h
+../../../../../WeChatPaySDK/Classes/WechatPayTool/XMLDictionary.h
