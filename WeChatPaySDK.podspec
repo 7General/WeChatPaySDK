@@ -27,10 +27,7 @@ Pod::Spec.new do |s|
   s.subspec "WechatOpenTool" do |wo|
       wo.source_files = 'WeChatPaySDK/Classes/WechatOpenTool/*.{h,m}'
   end
-  
-  s.subspec "WechatPayTool" do |wp|
-      wp.source_files = 'WeChatPaySDK/Classes/WechatPayTool/*.{h,m}'
-  end
+
   
   
 end

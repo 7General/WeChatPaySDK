@@ -42,10 +42,6 @@
     {
       "name": "WechatOpenTool",
       "source_files": "WeChatPaySDK/Classes/WechatOpenTool/*.{h,m}"
-    },
-    {
-      "name": "WechatPayTool",
-      "source_files": "WeChatPaySDK/Classes/WechatPayTool/*.{h,m}"
     }
   ]
 }
