@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   TODO: Add long description of the pod here.
   DESC
-  s.homepage         = 'https://github.com/wanghuizhou21@163.com/WeChatPaySDK'
+  s.homepage         = 'https://github.com/7General'
 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wanghuizhou21@163.com' => 'wanghuizhou@guazi.com' }
-  s.source           = { :git => 'https://github.com/wanghuizhou21@163.com/WeChatPaySDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/7General/WeChatPaySDK.git', :tag => s.version.to_s }
 
   s.vendored_libraries = 'WeChatPaySDK/Frameworks/libWeChatSDK.a'
   s.libraries = 'z','c++','sqlite3.0'
