@@ -60,6 +60,10 @@
 // NOTE: 9.0以后使用新API接口
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 {
+    /*
+     url.host:pay
+     wxbff3f84cc71554c1://pay/?returnKey=&ret=0
+     */
     return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
