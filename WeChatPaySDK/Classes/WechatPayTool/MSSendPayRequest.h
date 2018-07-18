@@ -21,7 +21,7 @@
 /** 商家根据财付通文档填写的数据和签名 */
 @property (nonatomic, retain) NSString *package;
 /** 时间戳，防重发 */
-@property (nonatomic, assign) UInt32 timeStamp;
+@property (nonatomic, retain) NSString * timeStamp;
 /** 商家根据微信开放平台文档对数据做的签名 */
 @property (nonatomic, retain) NSString *sign;
 @end

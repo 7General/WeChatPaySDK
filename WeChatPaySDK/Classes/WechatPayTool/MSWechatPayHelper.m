@@ -185,7 +185,7 @@
 //    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
 //    UInt32 timeStamp =[timeSp intValue];
 //    request.timeStamp= timeStamp;
-    request.timeStamp = payRequest.timeStamp;
+    request.timeStamp = [payRequest.timeStamp intValue];
     
     request.sign= payRequest.sign;
 

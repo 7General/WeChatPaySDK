@@ -14,7 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //注册微信支付
-    [WXApi registerApp:MXWechatAPPID withDescription:@"微信支付"];
+    //[WXApi registerApp:MXWechatAPPID withDescription:@"微信支付"];
+    [WXApi registerApp:@"wx16e73c94cb7048ac" withDescription:@"微信支付"];
     return YES;
 }
 
