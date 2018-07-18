@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - WeChatPaySDK (0.0.4):
+  - WeChatPaySDK (0.0.2):
     - AFNetworking
 
 DEPENDENCIES:
@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  WeChatPaySDK: c365c58656579ab37dcc20e5a03ae8b8a757d527
+  WeChatPaySDK: 742410b195b07b388cbaa0b5a2f0addfe9d182b2
 
 PODFILE CHECKSUM: ef7919db1b84ef3ea4e83f0c8001bdf731e7afc3
 
