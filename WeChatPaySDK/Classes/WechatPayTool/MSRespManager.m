@@ -7,17 +7,17 @@
  @return WXApiManager（微信结果回调类）
  */
 
-#import "WXApiManager.h"
+#import "MSRespManager.h"
 
-@implementation WXApiManager
+@implementation MSRespManager
 
 #pragma mark - 单粒
 
 +(instancetype)sharedManager {
     static dispatch_once_t onceToken;
-    static WXApiManager *instance;
+    static MSRespManager *instance;
     dispatch_once(&onceToken, ^{
-        instance = [[WXApiManager alloc] init];
+        instance = [[MSRespManager alloc] init];
     });
     return instance;
 }

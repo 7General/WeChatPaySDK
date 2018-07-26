@@ -12,7 +12,7 @@
 #import "MSWechatConfig.h"
 
 
-@interface WXApiManager : NSObject<WXApiDelegate>
+@interface MSRespManager : NSObject<WXApiDelegate>
 
 + (instancetype)sharedManager;
 
