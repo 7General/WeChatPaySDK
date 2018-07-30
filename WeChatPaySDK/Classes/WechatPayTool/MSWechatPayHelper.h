@@ -21,8 +21,10 @@
  * @param appdesc 应用附加信息，长度不超过1024字节
  * @return 成功返回YES，失败返回NO。
  */
-+(BOOL) registerApp:(NSString *)appid withDescription:(NSString *)appdesc;
++(BOOL) registerApp:(NSString *)appid;
 
+
++ (BOOL)handleOpenUrl:(NSURL *)url;
 
 /*! @brief 处理微信通过URL启动App时传递的数据
  *

@@ -16,7 +16,7 @@
     //注册微信支付
     //[WXApi registerApp:MXWechatAPPID withDescription:@"微信支付"];
     //[WXApi registerApp:@"wx16e73c94cb7048ac" withDescription:@"微信支付"];
-    [MSWechatPayHelper registerApp:MXWechatAPPID withDescription:@"微信支付"];
+    [MSWechatPayHelper registerApp:MXWechatAPPID];
     return YES;
 }
 
@@ -52,13 +52,15 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
 //    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+    return  [MSWechatPayHelper handleOpenUrl:url];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
 //    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+    return [MSWechatPayHelper handleOpenUrl:url];
 }
 
 // NOTE: 9.0以后使用新API接口
@@ -69,7 +71,8 @@
      wxbff3f84cc71554c1://pay/?returnKey=&ret=0
      */
     //return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
+    return [MSWechatPayHelper handleOpenUrl:url];
 }
 
 @end
