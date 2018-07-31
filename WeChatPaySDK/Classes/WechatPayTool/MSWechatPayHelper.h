@@ -24,7 +24,21 @@
 +(BOOL) registerApp:(NSString *)appid;
 
 
+/*!
+ 微信支付回调
+
+ @param url url
+ @return bool
+ */
 + (BOOL)handleOpenUrl:(NSURL *)url;
+
+/**
+ 是否支持微信支付
+
+ @return BOOL
+ */
++ (BOOL)canSupportPay;
+
 
 /*! @brief 处理微信通过URL启动App时传递的数据
  *

@@ -47,6 +47,15 @@
     return NO;
 }
 
+/**
+ 是否支持微信支付
+ 
+ @return BOOL
+ */
++ (BOOL)canSupportPay {
+    return [WXApi isWXAppInstalled];
+}
+
 
 #pragma mark - Public Methods
 + (void)WeChatPayTest {
