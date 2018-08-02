@@ -18,9 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    if([MSWechatPayHelper canSupportPay]){
+        NSLog(@"----yes");
+    } else {
+        NSLog(@"----no");
+    }
+    
+    MSWechatPayHelper * wechat = [[MSWechatPayHelper alloc] init];
+//    [wechat payShareTextMessage:@"ddddd" shareType:GZPayWeChatShareTypeFriend];
+    [wechat payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeTimeline)];
     
 //    [MSWechatPayHelper WeChatPayTest];
     /*
@@ -46,7 +56,7 @@
 //    request.sign = @"B04B36F82A02BEBE49C0BA84D1844E80";
 //    [MSWechatPayHelper WakeupWeChatPay:request];
 //    [self shareweChat];
-    [self weChatLogin];
+//    [self weChatLogin];
 }
 
 - (void)shareweChat {

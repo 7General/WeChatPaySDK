@@ -14,8 +14,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //注册微信支付
-    //[WXApi registerApp:MXWechatAPPID withDescription:@"微信支付"];
-    //[WXApi registerApp:@"wx16e73c94cb7048ac" withDescription:@"微信支付"];
     [MSWechatPayHelper registerApp:MXWechatAPPID];
     return YES;
 }
@@ -51,15 +49,11 @@
 #pragma mark - 微信支付回调
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-//    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
     return  [MSWechatPayHelper handleOpenUrl:url];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-//    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
     return [MSWechatPayHelper handleOpenUrl:url];
 }
 
@@ -70,8 +64,6 @@
      url.host:pay
      wxbff3f84cc71554c1://pay/?returnKey=&ret=0
      */
-    //return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
-//    return  [MSWechatPayHelper handleOpenURL:url delegate:[MSRespManager sharedManager]];
     return [MSWechatPayHelper handleOpenUrl:url];
 }
 

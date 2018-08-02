@@ -15,6 +15,12 @@
 #include <arpa/inet.h>
 #import "WXApi.h"
 
+@interface MSWechatPayHelper()
+
+@end
+
+
+
 @implementation MSWechatPayHelper
 
 
@@ -53,8 +59,71 @@
  @return BOOL
  */
 + (BOOL)canSupportPay {
-    return [WXApi isWXAppInstalled];
+    if([WXApi isWXAppInstalled] && [WXApi isWXAppSupportApi]){
+        return YES;
+    }
+    return NO;
 }
+
+
+/**
+ 分享纯文本消息
+ 
+ @param textMessage 文本信息
+ @param shareType 分享
+ @param shareResult 回调
+ */
+- (void)payShareTextMessage:(NSString *)textMessage
+               shareType:(GZPayWeChatShareType)shareType {
+    //微信相关
+    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
+        
+        NSInteger scene = WXSceneSession;
+        if (shareType == GZPayWeChatShareTypeTimeline) {
+            scene = WXSceneTimeline;
+        }
+        if (shareType == GZPayWeChatShareTypeFavorite) {
+            scene = WXSceneFavorite;
+        }
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.text = textMessage;
+        req.bText = YES;
+        req.scene = scene;
+        [WXApi sendReq:req];
+    }
+}
+
+
+- (void)payShareMediaMessageWithTitle:(NSString *)title
+                       description:(NSString *)description
+                        thumbImage:(UIImage *)thumbImage
+                          shareURL:(NSString *)shareURL
+                         shareType:(GZPayWeChatShareType)shareType {
+    WXWebpageObject *ext = [WXWebpageObject object];
+    ext.webpageUrl = shareURL;
+    
+    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
+        
+        NSInteger scene = WXSceneSession;
+        if (shareType == GZPayWeChatShareTypeTimeline) {
+            scene = WXSceneTimeline;
+        }
+        if (shareType == GZPayWeChatShareTypeFavorite) {
+            scene = WXSceneFavorite;
+        }
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = title?:@"";
+        message.description = description?:@"";
+        [message setThumbImage:thumbImage];
+        message.mediaObject = ext;
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.bText = NO;
+        req.message = message;
+        req.scene = scene;
+        [WXApi sendReq:req];
+    }
+}
+
 
 
 #pragma mark - Public Methods

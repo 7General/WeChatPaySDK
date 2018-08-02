@@ -30,7 +30,6 @@
         
         //支付返回结果，实际支付结果需要去微信服务器端查询
         NSString *strMsg;
-    
         switch (resp.errCode) {
             case WXSuccess:
                 strMsg = @"支付结果：成功！";
