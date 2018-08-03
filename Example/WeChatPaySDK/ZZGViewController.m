@@ -9,6 +9,7 @@
 #import "ZZGViewController.h"
 #import <WeChatPaySDK/MSWechatPayHelper.h>
 
+
 @interface ZZGViewController ()
 
 @end
@@ -27,14 +28,21 @@
     } else {
         NSLog(@"----no");
     }
+//    [[ZZGPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddd" description:@"osjin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:GZPayWeChatShareTypeFriend weChatResult:^(BOOL result) {
+//        NSLog(@"----------------------------%ld",result);
+//    }];
     
-    MSWechatPayHelper * wechat = [[MSWechatPayHelper alloc] init];
+    
 //    [wechat payShareTextMessage:@"ddddd" shareType:GZPayWeChatShareTypeFriend];
-    [wechat payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
-        NSLog(@"----------------------------%ld",result);
-    }];
+//    [[MSWechatPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
+//        NSLog(@"----------------------------%ld",result);
+//    }];
     
-//    [MSWechatPayHelper WeChatPayTest];
+//    [[MSWechatPayHelper defaultManager] WeChatPayTestweChatResult:^(BOOL result) {
+//        NSLog(@"===>>>>>>>%d",result);
+//    }];
+    
+//    [[MSWechatPayHelper defaultManager] WeChatPayTest];
     /*
     <xml><app><![CDATA[
      {"appId":"wx16e73c94cb7048ac",

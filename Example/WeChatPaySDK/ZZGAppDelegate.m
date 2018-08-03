@@ -8,6 +8,7 @@
 
 #import "ZZGAppDelegate.h"
 #import <WeChatPaySDK/MSWechatConfig.h>
+#import <WeChatPaySDK/ZZGPayHelper.h>
 
 @implementation ZZGAppDelegate
 
@@ -15,6 +16,7 @@
 {
     //注册微信支付
     [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
+//    [[ZZGPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
     return YES;
 }
 
@@ -50,12 +52,14 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     
-    return [[MSWechatPayHelper alloc] handleOpenUrl:url];;
+    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [[MSWechatPayHelper alloc] handleOpenUrl:url];
+    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
 }
 
 // NOTE: 9.0以后使用新API接口
@@ -65,7 +69,8 @@
      url.host:pay
      wxbff3f84cc71554c1://pay/?returnKey=&ret=0
      */
-    return [[MSWechatPayHelper alloc] handleOpenUrl:url];
+    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
 }
 
 @end

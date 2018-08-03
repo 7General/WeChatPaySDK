@@ -24,7 +24,7 @@ typedef enum : NSUInteger {
 + (instancetype)defaultManager;
 
 
-- (void)initWithWeChatPaySchemeId:(NSString *)appId;
+- (instancetype)initWithWeChatPaySchemeId:(NSString *)appId;
 
 
 /*! @brief WXApi的成员函数，向微信终端程序注册第三方应用。
@@ -46,7 +46,7 @@ typedef enum : NSUInteger {
 - (BOOL)handleOpenUrl:(NSURL *)url;
 
 /**
- 是否支持微信支付
+ 是否安装微信App
 
  @return BOOL
  */
@@ -56,7 +56,8 @@ typedef enum : NSUInteger {
 /**
  测试微信支付，所有的参数自己通过demo请求获取
  */
-+ (void)WeChatPayTest;
+- (void)WeChatPayTest;
+- (void)WeChatPayTestweChatResult:(void(^)(BOOL result))weChatResult;
 
 /**
  唤起微信支付
@@ -64,7 +65,8 @@ typedef enum : NSUInteger {
  @param payRequest 唤起微信支付要传入的参数对象，
  **自行校验是否为空数据
  */
-+ (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest ;
+- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest;
+- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult;
 
 
 /**

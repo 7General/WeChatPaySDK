@@ -33,12 +33,13 @@
     return instance;
 }
 
-
-
-
-- (void)initWithWeChatPaySchemeId:(NSString *)appId {
-    self.weCahtPayAppKey = appId;
-    [self registerApp:appId];
+- (instancetype)initWithWeChatPaySchemeId:(NSString *)appId {
+    self = [super init];
+    if (self) {
+        self.weCahtPayAppKey = appId;
+        [self registerApp:appId];
+    }
+    return self;
 }
 
 /*! @brief MSWechatPayHelper的成员函数，向微信终端程序注册第三方应用。
@@ -178,11 +179,7 @@
 
 
 #pragma mark - Public Methods
-+ (void)WeChatPayTest {
-    //============================================================
-    // 支付流程实现
-    // 客户端操作     (实际操作应由服务端操作)
-    //============================================================
+- (void)WeChatPayTest {
     NSString *tradeType = @"APP";                                       //交易类型
     NSString *totalFee  = @"1";                                         //交易价格1表示0.01元，10表示0.1元
     NSString *tradeNO   = [self generateTradeNO];                       //随机字符串变量 这里最好使用和安卓端一致的生成逻辑
@@ -201,7 +198,7 @@
                                                                            deviceIp:addressIP
                                                                           notifyUrl:notifyUrl
                                                                           tradeType:tradeType];
-
+    
     //转换成XML字符串,这里只是形似XML，实际并不是正确的XML格式，需要使用AF方法进行转义
     NSString *string = [[adaptor dic] XMLString];
     
@@ -261,134 +258,50 @@
      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          
      }];
-    
-    
-    //============================================================
-    // 支付流程实现
-    // 服务端操作
-    //============================================================
-    
-    //    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    //    params[WXTOTALFEE] = @"1";
-    //    params[WXEQUIPMENTIP] = [self fetchIPAddress];
-    //
-    //    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    ////    [session.requestSerializer setValue:@"text/html; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-    //    [session POST:URLSTRING parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    //
-    //        NSLog(@"responseObject = %@",responseObject);
-    //
-    ////        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-    ////        NSLog(@"dictionary = %@",dictionary);
-    //
-    ////        //  输出XML数据
-    ////        NSString *responseString = [[NSString alloc] initWithData:responseObject
-    ////                                                         encoding:NSUTF8StringEncoding] ;
-    ////        //  将微信返回的xml数据解析转义成字典
-    ////        NSDictionary *dic = [NSDictionary dictionaryWithXMLString:responseString];
-    ////
-    //        // 判断返回的许可
-    //        if ([[responseObject objectForKey:@"result_code"] isEqualToString:@"SUCCESS"]
-    //            &&[[responseObject objectForKey:@"return_code"] isEqualToString:@"SUCCESS"] ) {
-    //
-    //
-    //            // 发起微信支付，设置参数
-    //            PayReq *request = [[PayReq alloc] init];
-    //            request.openID = [responseObject objectForKey:WXAPPID];
-    //            request.partnerId = [responseObject objectForKey:WXMCHID];
-    //            request.prepayId= [responseObject objectForKey:WXPREPAYID];
-    //            request.package = @"Sign=WXPay";
-    //            request.nonceStr= [responseObject objectForKey:WXNONCESTR];
-    //
-    //
-    //
-    //            // 将当前时间转化成时间戳
-    ////            NSDate *datenow = [NSDate date];
-    ////            NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
-    ////            UInt32 timeStamp =[timeSp intValue];
-    //            request.timeStamp= [[responseObject objectForKey:@"timestamp"] intValue];
-    //
-    //
-    //
-    //            // 签名加密
-    ////            DataMD5 *md5 = [[DataMD5 alloc] init];
-    //            request.sign = [responseObject objectForKey:@"sign"];
-    ////            request.sign=[md5 createMD5SingForPay:request.openID
-    ////                                        partnerid:request.partnerId
-    ////                                         prepayid:request.prepayId
-    ////                                          package:request.package
-    ////                                         noncestr:request.nonceStr
-    ////                                        timestamp:request.timeStamp];
-    //
-    //            NSLog(@"%@--%@--%@--%@--%@--%d--%@",request.openID,request.partnerId,request.prepayId,request.package,request.nonceStr,request.timeStamp,request.sign);
-    ////            // 调用微信
-    //            [WXApi sendReq:request];
-    //        }
-    //
-    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-    //
-    //        NSLog(@"%@",error);
-    //    }];
-    
 }
 
-+ (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest {
+- (void)WeChatPayTestweChatResult:(void(^)(BOOL result))weChatResult {
+    [self WeChatPayTest];
+    self.weChatResult = weChatResult;
+}
+
+
+- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest {
     PayReq *request = [[PayReq alloc] init];
     request.openID = payRequest.openID;
     request.partnerId = payRequest.partnerId;
     request.prepayId= payRequest.prepayId;
-//    request.package = @"Sign=WXPay";
     request.package = payRequest.package;
     request.nonceStr= payRequest.nonceStr;
-    
-    // 将当前时间转化成时间戳
-//    NSDate *datenow = [NSDate date];
-//    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
-//    UInt32 timeStamp =[timeSp intValue];
-//    request.timeStamp= timeStamp;
     request.timeStamp = [payRequest.timeStamp intValue];
-    
     request.sign= payRequest.sign;
-
+    
     // 调用微信
     [WXApi sendReq:request];
+}
+- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult {
+    [self WakeupWeChatPay:payRequest];
+    self.weChatResult = weChatResult;
+    
 }
 
 
 
 #pragma mark - Private Method
-/**
- ------------------------------
- 产生随机字符串
- ------------------------------
- 1.生成随机数算法 ,随机字符串，不长于32位
- 2.微信支付API接口协议中包含字段nonce_str，主要保证签名不可预测。
- 3.我们推荐生成随机数算法如下：调用随机数函数生成，将得到的值转换为字符串。
- */
-+ (NSString *)generateTradeNO
+- (NSString *)generateTradeNO
 {
     static int kNumber = 15;
     
     NSString *sourceStr = @"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     NSMutableString *resultStr = [[NSMutableString alloc] init];
-    
-    //  srand函数是初始化随机数的种子，为接下来的rand函数调用做准备。
-    //  time(0)函数返回某一特定时间的小数值。
-    //  这条语句的意思就是初始化随机数种子，time函数是为了提高随机的质量（也就是减少重复）而使用的。
-    
-    //　srand(time(0)) 就是给这个算法一个启动种子，也就是算法的随机种子数，有这个数以后才可以产生随机数,用1970.1.1至今的秒数，初始化随机数种子。
-    //　Srand是种下随机种子数，你每回种下的种子不一样，用Rand得到的随机数就不一样。为了每回种下一个不一样的种子，所以就选用Time(0)，Time(0)是得到当前时时间值（因为每时每刻时间是不一样的了）。
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wshorten-64-to-32"
     srand(time(0)); // 此行代码有警告:
 #pragma clang diagnostic pop
     for (int i = 0; i < kNumber; i++) {
-        
         unsigned index = rand() % [sourceStr length];
-        
         NSString *oneStr = [sourceStr substringWithRange:NSMakeRange(index, 1)];
-        
         [resultStr appendString:oneStr];
     }
     return resultStr;
@@ -400,7 +313,7 @@
  ------------------------------
  1.貌似该方法获取ip地址只能在wifi状态下进行
  */
-+ (NSString *)fetchIPAddress
+- (NSString *)fetchIPAddress
 {
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
