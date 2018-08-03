@@ -16,39 +16,46 @@
 #import "WXApi.h"
 
 @interface MSWechatPayHelper()
-
+@property (nonatomic, copy) void (^weChatResult) (BOOL result);
+@property (nonatomic, strong) NSString *weCahtPayAppKey;
 @end
 
 
 
 @implementation MSWechatPayHelper
 
++ (instancetype)defaultManager {
+    static dispatch_once_t onceToken;
+    static MSWechatPayHelper *instance;
+    dispatch_once(&onceToken, ^{
+        instance = [[MSWechatPayHelper alloc] init];
+    });
+    return instance;
+}
+
+
+
+
+- (void)initWithWeChatPaySchemeId:(NSString *)appId {
+    self.weCahtPayAppKey = appId;
+    [self registerApp:appId];
+}
 
 /*! @brief MSWechatPayHelper的成员函数，向微信终端程序注册第三方应用。
  *
  * 需要在每次启动第三方应用程序时调用。第一次调用后，会在微信的可用应用列表中出现。
  * @see registerApp
  * @param appid 微信开发者ID
- * @param appdesc 应用附加信息，长度不超过1024字节
  * @return 成功返回YES，失败返回NO。
  */
-+(BOOL) registerApp:(NSString *)appid {
+- (BOOL) registerApp:(NSString *)appid {
    return [WXApi registerApp:appid withDescription:@"微信支付"];
 }
-/*! @brief 处理微信通过URL启动App时传递的数据
- *
- * 需要在 application:openURL:sourceApplication:annotation:或者application:handleOpenURL中调用。
- * @param url 微信启动第三方应用时传递过来的URL
- * @param delegate  WXApiDelegate对象，用来接收微信触发的消息。
- * @return 成功返回YES，失败返回NO。
- */
-+(BOOL) handleOpenURL:(NSURL *) url delegate:(id<WXApiDelegate>) delegate {
-    return [WXApi handleOpenURL:url delegate:delegate];
-}
 
-+ (BOOL)handleOpenUrl:(NSURL *)url {
-    if ([url.host isEqualToString:@"pay"]) {
-        return [MSWechatPayHelper handleOpenURL:url delegate:(id<WXApiDelegate>)self];
+
+- (BOOL)handleOpenUrl:(NSURL *)url {
+    if ([url.scheme isEqualToString:self.weCahtPayAppKey]) {
+        return [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)self];
     }
     return NO;
 }
@@ -74,10 +81,11 @@
  @param shareResult 回调
  */
 - (void)payShareTextMessage:(NSString *)textMessage
-               shareType:(GZPayWeChatShareType)shareType {
+               shareType:(GZPayWeChatShareType)shareType
+               weChatResult:(void(^)(BOOL result))weChatResult {
     //微信相关
     if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
-        
+        self.weChatResult = weChatResult;
         NSInteger scene = WXSceneSession;
         if (shareType == GZPayWeChatShareTypeTimeline) {
             scene = WXSceneTimeline;
@@ -98,12 +106,13 @@
                        description:(NSString *)description
                         thumbImage:(UIImage *)thumbImage
                           shareURL:(NSString *)shareURL
-                         shareType:(GZPayWeChatShareType)shareType {
+                         shareType:(GZPayWeChatShareType)shareType
+                          weChatResult:(void(^)(BOOL result))weChatResult {
     WXWebpageObject *ext = [WXWebpageObject object];
     ext.webpageUrl = shareURL;
     
     if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
-        
+        self.weChatResult = weChatResult;
         NSInteger scene = WXSceneSession;
         if (shareType == GZPayWeChatShareTypeTimeline) {
             scene = WXSceneTimeline;
@@ -124,6 +133,48 @@
     }
 }
 
+- (void)onResp:(BaseResp *)resp
+{
+    if([resp isKindOfClass:[PayResp class]]){
+        NSString *strMsg;
+        switch (resp.errCode) {
+            case WXSuccess:
+                strMsg = @"支付结果：成功！";
+                NSLog(@"支付成功－PaySuccess，retcode = %d", resp.errCode);
+                if (self.weChatResult) {
+                    self.weChatResult(1);
+                    self.weChatResult = nil;
+                }
+                break;
+                
+            default:
+                strMsg = [NSString stringWithFormat:@"支付结果：失败！retcode = %d, retstr = %@", resp.errCode,resp.errStr];
+                NSLog(@"错误，retcode = %d, retstr = %@", resp.errCode,resp.errStr);
+                if (self.weChatResult) {
+                    self.weChatResult(0);
+                    self.weChatResult = nil;
+                }
+                break;
+        }
+    } else {
+        switch (resp.errCode) {
+            case WXSuccess:
+                if (self.weChatResult) {
+                    self.weChatResult(1);
+                    self.weChatResult = nil;
+                }
+                break;
+                
+            default:
+                if (self.weChatResult) {
+                    self.weChatResult(0);
+                    self.weChatResult = nil;
+                }
+                break;
+        }
+        
+    }
+}
 
 
 #pragma mark - Public Methods

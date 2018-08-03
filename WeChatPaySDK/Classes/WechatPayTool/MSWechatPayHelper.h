@@ -20,6 +20,13 @@ typedef enum : NSUInteger {
 
 @interface MSWechatPayHelper : NSObject
 
+
++ (instancetype)defaultManager;
+
+
+- (void)initWithWeChatPaySchemeId:(NSString *)appId;
+
+
 /*! @brief WXApi的成员函数，向微信终端程序注册第三方应用。
  *
  * 需要在每次启动第三方应用程序时调用。第一次调用后，会在微信的可用应用列表中出现。
@@ -27,7 +34,7 @@ typedef enum : NSUInteger {
  * @param appid 微信开发者ID
  * @return 成功返回YES，失败返回NO。
  */
-+(BOOL) registerApp:(NSString *)appid;
+- (BOOL) registerApp:(NSString *)appid;
 
 
 /*!
@@ -36,7 +43,7 @@ typedef enum : NSUInteger {
  @param url url
  @return bool
  */
-+ (BOOL)handleOpenUrl:(NSURL *)url;
+- (BOOL)handleOpenUrl:(NSURL *)url;
 
 /**
  是否支持微信支付
@@ -44,16 +51,6 @@ typedef enum : NSUInteger {
  @return BOOL
  */
 + (BOOL)canSupportPay;
-
-
-/*! @brief 处理微信通过URL启动App时传递的数据
- *
- * 需要在 application:openURL:sourceApplication:annotation:或者application:handleOpenURL中调用。
- * @param url 微信启动第三方应用时传递过来的URL
- * @param delegate  WXApiDelegate对象，用来接收微信触发的消息。
- * @return 成功返回YES，失败返回NO。
- */
-+(BOOL) handleOpenURL:(NSURL *) url delegate:(id<WXApiDelegate>) delegate;
 
 
 /**
@@ -77,7 +74,8 @@ typedef enum : NSUInteger {
  @param shareType 分享
  */
 - (void)payShareTextMessage:(NSString *)textMessage
-                  shareType:(GZPayWeChatShareType)shareType;
+                  shareType:(GZPayWeChatShareType)shareType
+               weChatResult:(void(^)(BOOL result))weChatResult;
 
 
 
@@ -94,6 +92,7 @@ typedef enum : NSUInteger {
                        description:(NSString *)description
                         thumbImage:(UIImage *)thumbImage
                           shareURL:(NSString *)shareURL
-                            shareType:(GZPayWeChatShareType)shareType;
+                            shareType:(GZPayWeChatShareType)shareType
+                         weChatResult:(void(^)(BOOL result))weChatResult;
 
 @end

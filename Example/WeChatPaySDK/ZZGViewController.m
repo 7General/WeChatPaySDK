@@ -30,7 +30,9 @@
     
     MSWechatPayHelper * wechat = [[MSWechatPayHelper alloc] init];
 //    [wechat payShareTextMessage:@"ddddd" shareType:GZPayWeChatShareTypeFriend];
-    [wechat payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeTimeline)];
+    [wechat payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
+        NSLog(@"----------------------------%ld",result);
+    }];
     
 //    [MSWechatPayHelper WeChatPayTest];
     /*
