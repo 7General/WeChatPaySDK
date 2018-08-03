@@ -31,7 +31,6 @@
 
     
     
-//    [wechat payShareTextMessage:@"ddddd" shareType:GZPayWeChatShareTypeFriend];
     [[MSWechatPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
         NSLog(@"----------------------------%d",result);
     }];

@@ -20,7 +20,6 @@ typedef enum : NSUInteger {
 
 @interface MSWechatPayHelper : NSObject
 
-
 + (instancetype)defaultManager;
 
 
