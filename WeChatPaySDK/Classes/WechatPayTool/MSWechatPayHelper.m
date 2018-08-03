@@ -41,6 +41,10 @@
     }
     return self;
 }
+- (void)weChatPaySchemeId:(NSString *)appId {
+    self.weCahtPayAppKey = appId;
+    [self registerApp:appId];
+}
 
 /*! @brief MSWechatPayHelper的成员函数，向微信终端程序注册第三方应用。
  *

@@ -25,7 +25,7 @@ typedef enum : NSUInteger {
 
 
 - (instancetype)initWithWeChatPaySchemeId:(NSString *)appId;
-
+- (void)weChatPaySchemeId:(NSString *)appId;
 
 /*! @brief WXApi的成员函数，向微信终端程序注册第三方应用。
  *

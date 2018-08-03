@@ -28,15 +28,13 @@
     } else {
         NSLog(@"----no");
     }
-//    [[ZZGPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddd" description:@"osjin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:GZPayWeChatShareTypeFriend weChatResult:^(BOOL result) {
-//        NSLog(@"----------------------------%ld",result);
-//    }];
+
     
     
 //    [wechat payShareTextMessage:@"ddddd" shareType:GZPayWeChatShareTypeFriend];
-//    [[MSWechatPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
-//        NSLog(@"----------------------------%ld",result);
-//    }];
+    [[MSWechatPayHelper defaultManager] payShareMediaMessageWithTitle:@"ddddd" description:@"osjoin" thumbImage:[UIImage imageNamed:@"123.jpg"] shareURL:@"www.osjoin.com" shareType:(GZPayWeChatShareTypeFriend) weChatResult:^(BOOL result) {
+        NSLog(@"----------------------------%d",result);
+    }];
     
 //    [[MSWechatPayHelper defaultManager] WeChatPayTestweChatResult:^(BOOL result) {
 //        NSLog(@"===>>>>>>>%d",result);

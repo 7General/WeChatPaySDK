@@ -8,14 +8,14 @@
 
 #import "ZZGAppDelegate.h"
 #import <WeChatPaySDK/MSWechatConfig.h>
-#import <WeChatPaySDK/ZZGPayHelper.h>
 
 @implementation ZZGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //注册微信支付
-    [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
+//    [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
+    [[MSWechatPayHelper defaultManager] weChatPaySchemeId:MXWechatAPPID];
 //    [[ZZGPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
     return YES;
 }
