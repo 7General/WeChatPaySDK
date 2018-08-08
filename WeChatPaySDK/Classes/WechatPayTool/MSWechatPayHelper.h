@@ -68,32 +68,32 @@ typedef enum : NSUInteger {
 - (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult;
 
 
-/**
- 分享纯文本消息
-
- @param textMessage 文本信息
- @param shareType 分享
- */
-- (void)payShareTextMessage:(NSString *)textMessage
-                  shareType:(GZPayWeChatShareType)shareType
-               weChatResult:(void(^)(BOOL result))weChatResult;
-
-
-
-/**
- 微信分享URL
-
- @param title 标题
- @param description 描述
- @param thumbImage 缩略图
- @param shareURL 分享URL
- @param shareType 分享类型
- */
-- (void)payShareMediaMessageWithTitle:(NSString *)title
-                       description:(NSString *)description
-                        thumbImage:(UIImage *)thumbImage
-                          shareURL:(NSString *)shareURL
-                            shareType:(GZPayWeChatShareType)shareType
-                         weChatResult:(void(^)(BOOL result))weChatResult;
+///**
+// 分享纯文本消息
+//
+// @param textMessage 文本信息
+// @param shareType 分享
+// */
+//- (void)payShareTextMessage:(NSString *)textMessage
+//                  shareType:(GZPayWeChatShareType)shareType
+//               weChatResult:(void(^)(BOOL result))weChatResult;
+//
+//
+//
+///**
+// 微信分享URL
+//
+// @param title 标题
+// @param description 描述
+// @param thumbImage 缩略图
+// @param shareURL 分享URL
+// @param shareType 分享类型
+// */
+//- (void)payShareMediaMessageWithTitle:(NSString *)title
+//                       description:(NSString *)description
+//                        thumbImage:(UIImage *)thumbImage
+//                          shareURL:(NSString *)shareURL
+//                            shareType:(GZPayWeChatShareType)shareType
+//                         weChatResult:(void(^)(BOOL result))weChatResult;
 
 @end

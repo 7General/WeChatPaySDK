@@ -85,65 +85,65 @@
  @param shareType 分享
  @param shareResult 回调
  */
-- (void)payShareTextMessage:(NSString *)textMessage
-               shareType:(GZPayWeChatShareType)shareType
-               weChatResult:(void(^)(BOOL result))weChatResult {
-    //微信相关
-    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
-        self.weChatResult = weChatResult;
-        NSInteger scene = WXSceneSession;
-        if (shareType == GZPayWeChatShareTypeTimeline) {
-            scene = WXSceneTimeline;
-        }
-        if (shareType == GZPayWeChatShareTypeFavorite) {
-            scene = WXSceneFavorite;
-        }
-        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
-        req.text = textMessage;
-        req.bText = YES;
-        req.scene = scene;
-        [WXApi sendReq:req];
-    }
-}
-
-
-- (void)payShareMediaMessageWithTitle:(NSString *)title
-                       description:(NSString *)description
-                        thumbImage:(UIImage *)thumbImage
-                          shareURL:(NSString *)shareURL
-                         shareType:(GZPayWeChatShareType)shareType
-                          weChatResult:(void(^)(BOOL result))weChatResult {
-    WXWebpageObject *ext = [WXWebpageObject object];
-    ext.webpageUrl = shareURL;
-    
-    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
-        self.weChatResult = weChatResult;
-        NSInteger scene = WXSceneSession;
-        if (shareType == GZPayWeChatShareTypeTimeline) {
-            scene = WXSceneTimeline;
-        }
-        if (shareType == GZPayWeChatShareTypeFavorite) {
-            scene = WXSceneFavorite;
-        }
-        WXMediaMessage *message = [WXMediaMessage message];
-        message.title = title?:@"";
-        message.description = description?:@"";
-        [message setThumbImage:thumbImage];
-        message.mediaObject = ext;
-        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
-        req.bText = NO;
-        req.message = message;
-        req.scene = scene;
-        [WXApi sendReq:req];
-    }
-}
+//- (void)payShareTextMessage:(NSString *)textMessage
+//               shareType:(GZPayWeChatShareType)shareType
+//               weChatResult:(void(^)(BOOL result))weChatResult {
+//    //微信相关
+//    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
+//        self.weChatResult = weChatResult;
+//        NSInteger scene = WXSceneSession;
+//        if (shareType == GZPayWeChatShareTypeTimeline) {
+//            scene = WXSceneTimeline;
+//        }
+//        if (shareType == GZPayWeChatShareTypeFavorite) {
+//            scene = WXSceneFavorite;
+//        }
+//        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+//        req.text = textMessage;
+//        req.bText = YES;
+//        req.scene = scene;
+//        [WXApi sendReq:req];
+//    }
+//}
+//
+//
+//- (void)payShareMediaMessageWithTitle:(NSString *)title
+//                       description:(NSString *)description
+//                        thumbImage:(UIImage *)thumbImage
+//                          shareURL:(NSString *)shareURL
+//                         shareType:(GZPayWeChatShareType)shareType
+//                          weChatResult:(void(^)(BOOL result))weChatResult {
+//    WXWebpageObject *ext = [WXWebpageObject object];
+//    ext.webpageUrl = shareURL;
+//    
+//    if (shareType == GZPayWeChatShareTypeFriend || shareType == GZPayWeChatShareTypeTimeline || shareType == GZPayWeChatShareTypeFavorite) {
+//        self.weChatResult = weChatResult;
+//        NSInteger scene = WXSceneSession;
+//        if (shareType == GZPayWeChatShareTypeTimeline) {
+//            scene = WXSceneTimeline;
+//        }
+//        if (shareType == GZPayWeChatShareTypeFavorite) {
+//            scene = WXSceneFavorite;
+//        }
+//        WXMediaMessage *message = [WXMediaMessage message];
+//        message.title = title?:@"";
+//        message.description = description?:@"";
+//        [message setThumbImage:thumbImage];
+//        message.mediaObject = ext;
+//        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+//        req.bText = NO;
+//        req.message = message;
+//        req.scene = scene;
+//        [WXApi sendReq:req];
+//    }
+//}
 
 - (void)onResp:(BaseResp *)resp
 {
     if([resp isKindOfClass:[PayResp class]]){
         NSString *strMsg;
         switch (resp.errCode) {
-            case WXSuccess:
+            case 0:
                 strMsg = @"支付结果：成功！";
                 NSLog(@"支付成功－PaySuccess，retcode = %d", resp.errCode);
                 if (self.weChatResult) {
@@ -163,7 +163,7 @@
         }
     } else {
         switch (resp.errCode) {
-            case WXSuccess:
+            case 0:
                 if (self.weChatResult) {
                     self.weChatResult(1);
                     self.weChatResult = nil;

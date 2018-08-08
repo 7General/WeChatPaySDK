@@ -8,77 +8,78 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-/*! @brief 错误码
- *
- */
-enum  WXErrCode {
-    WXSuccess           = 0,    /**< 成功    */
-    WXErrCodeCommon     = -1,   /**< 普通错误类型    */
-    WXErrCodeUserCancel = -2,   /**< 用户点击取消并返回    */
-    WXErrCodeSentFail   = -3,   /**< 发送失败    */
-    WXErrCodeAuthDeny   = -4,   /**< 授权失败    */
-    WXErrCodeUnsupport  = -5,   /**< 微信不支持    */
-};
-
-
-
-/*! @brief 请求发送场景
- *
- */
-enum WXScene {
-    WXSceneSession  = 0,        /**< 聊天界面    */
-    WXSceneTimeline = 1,        /**< 朋友圈      */
-    WXSceneFavorite = 2,        /**< 收藏       */
-};
-
-
-
-enum WXAPISupport {
-    WXAPISupportSession = 0,
-};
-
-
-
-/*! @brief 跳转profile类型
- *
- */
-enum WXBizProfileType{
-    WXBizProfileType_Normal = 0,    //**< 普通公众号  */
-    WXBizProfileType_Device = 1,    //**< 硬件公众号  */
-};
-
-
-
-/*! @brief 跳转mp网页类型
- *
- */
-enum WXMPWebviewType {
-    WXMPWebviewType_Ad = 0,        /**< 广告网页 **/
-};
-
-
-/*! @brief 应用支持接收微信的文件类型
- *
- */
-typedef NS_ENUM(UInt64, enAppSupportContentFlag)
-{
-    MMAPP_SUPPORT_NOCONTENT = 0x0,
-    MMAPP_SUPPORT_TEXT      = 0x1,
-    MMAPP_SUPPORT_PICTURE   = 0x2,
-    MMAPP_SUPPORT_LOCATION  = 0x4,
-    MMAPP_SUPPORT_VIDEO     = 0x8,
-    MMAPP_SUPPORT_AUDIO     = 0x10,
-    MMAPP_SUPPORT_WEBPAGE   = 0x20,
-    
-    // Suport File Type
-    MMAPP_SUPPORT_DOC  = 0x40,               // doc
-    MMAPP_SUPPORT_DOCX = 0x80,               // docx
-    MMAPP_SUPPORT_PPT  = 0x100,              // ppt
-    MMAPP_SUPPORT_PPTX = 0x200,              // pptx
-    MMAPP_SUPPORT_XLS  = 0x400,              // xls
-    MMAPP_SUPPORT_XLSX = 0x800,              // xlsx
-    MMAPP_SUPPORT_PDF  = 0x1000,             // pdf
-};
+//
+///*! @brief 错误码
+// *
+// */
+//enum  WXErrCode {
+//    WXSuccess           = 0,    /**< 成功    */
+//    WXErrCodeCommon     = -1,   /**< 普通错误类型    */
+//    WXErrCodeUserCancel = -2,   /**< 用户点击取消并返回    */
+//    WXErrCodeSentFail   = -3,   /**< 发送失败    */
+//    WXErrCodeAuthDeny   = -4,   /**< 授权失败    */
+//    WXErrCodeUnsupport  = -5,   /**< 微信不支持    */
+//};
+//
+//
+//
+///*! @brief 请求发送场景
+// *
+// */
+//enum WXScene {
+//    WXSceneSession  = 0,        /**< 聊天界面    */
+//    WXSceneTimeline = 1,        /**< 朋友圈      */
+//    WXSceneFavorite = 2,        /**< 收藏       */
+//};
+//
+//
+//
+//enum WXAPISupport {
+//    WXAPISupportSession = 0,
+//};
+//
+//
+//
+///*! @brief 跳转profile类型
+// *
+// */
+//enum WXBizProfileType{
+//    WXBizProfileType_Normal = 0,    //**< 普通公众号  */
+//    WXBizProfileType_Device = 1,    //**< 硬件公众号  */
+//};
+//
+//
+//
+///*! @brief 跳转mp网页类型
+// *
+// */
+//enum WXMPWebviewType {
+//    WXMPWebviewType_Ad = 0,        /**< 广告网页 **/
+//};
+//
+//
+///*! @brief 应用支持接收微信的文件类型
+// *
+// */
+//typedef NS_ENUM(UInt64, enAppSupportContentFlag)
+//{
+//    MMAPP_SUPPORT_NOCONTENT = 0x0,
+//    MMAPP_SUPPORT_TEXT      = 0x1,
+//    MMAPP_SUPPORT_PICTURE   = 0x2,
+//    MMAPP_SUPPORT_LOCATION  = 0x4,
+//    MMAPP_SUPPORT_VIDEO     = 0x8,
+//    MMAPP_SUPPORT_AUDIO     = 0x10,
+//    MMAPP_SUPPORT_WEBPAGE   = 0x20,
+//    
+//    // Suport File Type
+//    MMAPP_SUPPORT_DOC  = 0x40,               // doc
+//    MMAPP_SUPPORT_DOCX = 0x80,               // docx
+//    MMAPP_SUPPORT_PPT  = 0x100,              // ppt
+//    MMAPP_SUPPORT_PPTX = 0x200,              // pptx
+//    MMAPP_SUPPORT_XLS  = 0x400,              // xls
+//    MMAPP_SUPPORT_XLSX = 0x800,              // xlsx
+//    MMAPP_SUPPORT_PDF  = 0x1000,             // pdf
+//};
 
 #pragma mark - BaseReq
 /*! @brief 该类为微信终端SDK所有请求类的基类

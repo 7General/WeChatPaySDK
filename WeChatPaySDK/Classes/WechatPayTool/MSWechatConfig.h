@@ -10,7 +10,6 @@
 #define MXWechatConfig_h
 
 #import "WXApi.h"
-#import "MSRespManager.h"
 #import "MSWechatPayHelper.h"  //微信支付调用类
 #import "MSWechatSignAdaptor.h" //微信签名工具类
 #import "XMLDictionary.h"            //XML转换工具类
