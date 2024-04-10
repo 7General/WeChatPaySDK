@@ -1,1 +1,0 @@
-../../../../../WeChatPaySDK/Classes/WechatOpenTool/WechatAuthSDK.h

@@ -1,1 +1,0 @@
-../../../../../WeChatPaySDK/Classes/WechatOpenTool/WXApiObject.h

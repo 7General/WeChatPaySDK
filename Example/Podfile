@@ -1,4 +1,5 @@
-#use_frameworks!
+use_frameworks!
+platform :ios, '12.0'
 
 target 'WeChatPaySDK_Example' do
   pod 'WeChatPaySDK', :path => '../'

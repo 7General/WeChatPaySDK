@@ -27,10 +27,11 @@
     "Foundation",
     "CoreTelephony",
     "Security",
-    "CFNetwork"
+    "CFNetwork",
+    "WebKit"
   ],
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
   "source_files": "WeChatPaySDK/Classes/**/*",
   "dependencies": {

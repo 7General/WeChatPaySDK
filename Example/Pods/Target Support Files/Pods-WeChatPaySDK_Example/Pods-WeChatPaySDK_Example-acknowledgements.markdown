@@ -26,7 +26,7 @@ THE SOFTWARE.
 
 ## WeChatPaySDK
 
-Copyright (c) 2018 wanghuizhou21@163.com <wanghuizhou@guazi.com>
+###Copyright (c) 2018 wanghuizhou21@163.com <wanghuizhou@guazi.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

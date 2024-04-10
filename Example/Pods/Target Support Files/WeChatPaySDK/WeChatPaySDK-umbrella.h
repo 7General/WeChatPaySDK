@@ -13,10 +13,10 @@
 #import "WechatAuthSDK.h"
 #import "WXApi.h"
 #import "WXApiObject.h"
-#import "MXWechatConfig.h"
-#import "MXWechatPayHandler.h"
-#import "MXWechatSignAdaptor.h"
-#import "WXApiManager.h"
+#import "MSSendPayRequest.h"
+#import "MSWechatConfig.h"
+#import "MSWechatPayHelper.h"
+#import "MSWechatSignAdaptor.h"
 #import "XMLDictionary.h"
 
 FOUNDATION_EXPORT double WeChatPaySDKVersionNumber;

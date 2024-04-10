@@ -1,1 +1,0 @@
-../../../../../WeChatPaySDK/Classes/WechatPayTool/MSWechatSignAdaptor.h

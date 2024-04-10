@@ -54,7 +54,7 @@
  * @return 成功返回YES，失败返回NO。
  */
 - (BOOL) registerApp:(NSString *)appid {
-   return [WXApi registerApp:appid withDescription:@"微信支付"];
+    return  [WXApi registerApp:appid universalLink:@"https://gate.beihujia.com.cn/"];
 }
 
 
@@ -228,8 +228,8 @@
          NSDictionary *dic = [NSDictionary dictionaryWithXMLString:responseString];
          
          // 判断返回的许可
-         if ([[dic objectForKey:@"result_code"] isEqualToString:@"SUCCESS"]
-             &&[[dic objectForKey:@"return_code"] isEqualToString:@"SUCCESS"] ) {
+//         if ([[dic objectForKey:@"result_code"] isEqualToString:@"SUCCESS"]
+//             &&[[dic objectForKey:@"return_code"] isEqualToString:@"SUCCESS"] ) {
              // 发起微信支付，设置参数
              PayReq *request = [[PayReq alloc] init];
              request.openID = [dic objectForKey:WXAPPID];
@@ -256,8 +256,11 @@
              
              
              // 调用微信
-             [WXApi sendReq:request];
-         }
+//             [WXApi sendReq:request];
+             [WXApi sendReq:request completion:^(BOOL success) {
+                 
+             }];
+//         }
          
      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          
@@ -281,7 +284,10 @@
     request.sign= payRequest.sign;
     
     // 调用微信
-    [WXApi sendReq:request];
+    [WXApi sendReq:request completion:^(BOOL success) {
+        
+    }];
+    
 }
 - (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult {
     [self WakeupWeChatPay:payRequest];

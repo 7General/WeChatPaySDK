@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
 
   s.vendored_libraries = 'WeChatPaySDK/Frameworks/libWeChatSDK.a'
   s.libraries = 'z','c++','sqlite3.0'
-  s.frameworks = 'UIKit', 'SystemConfiguration', 'Foundation', 'CoreTelephony', 'Security', 'CFNetwork'
+  s.frameworks = 'UIKit', 'SystemConfiguration', 'Foundation', 'CoreTelephony', 'Security', 'CFNetwork','WebKit'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
 s.source_files = 'WeChatPaySDK/Classes/**/*'
 
