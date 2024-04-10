@@ -1,36 +1,15 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
-  - WeChatPaySDK (0.0.8):
-    - AFNetworking
+  - WeChatPaySDK (0.0.8)
 
 DEPENDENCIES:
   - WeChatPaySDK (from `../`)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
 
 EXTERNAL SOURCES:
   WeChatPaySDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
-  WeChatPaySDK: 2f52e7d4b305a79620fa791d7c5a68c528cb48a5
+  WeChatPaySDK: 7fe5787886c4bd9d1ccfa12231c6f26c3a5368fc
 
 PODFILE CHECKSUM: 00454a8ee80dc071c73d6c598fcbafcb85aa51e2
 

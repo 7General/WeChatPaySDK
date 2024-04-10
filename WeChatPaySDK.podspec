@@ -16,12 +16,13 @@ Pod::Spec.new do |s|
   s.vendored_libraries = 'WeChatPaySDK/Frameworks/libWeChatSDK.a'
   s.libraries = 'z','c++','sqlite3.0'
   s.frameworks = 'UIKit', 'SystemConfiguration', 'Foundation', 'CoreTelephony', 'Security', 'CFNetwork','WebKit'
+  s.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-ObjC','-all_load']}
 
   s.ios.deployment_target = '12.0'
 
 s.source_files = 'WeChatPaySDK/Classes/**/*'
 
-  s.dependency 'AFNetworking'
+  #s.dependency 'AFNetworking'
   
   ## 模块文件
   #s.subspec "WechatOpenTool" do |wo|

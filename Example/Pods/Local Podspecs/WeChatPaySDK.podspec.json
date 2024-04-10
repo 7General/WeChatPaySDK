@@ -30,13 +30,14 @@
     "CFNetwork",
     "WebKit"
   ],
+  "user_target_xcconfig": {
+    "OTHER_LDFLAGS": [
+      "-ObjC",
+      "-all_load"
+    ]
+  },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "WeChatPaySDK/Classes/**/*",
-  "dependencies": {
-    "AFNetworking": [
-
-    ]
-  }
+  "source_files": "WeChatPaySDK/Classes/**/*"
 }

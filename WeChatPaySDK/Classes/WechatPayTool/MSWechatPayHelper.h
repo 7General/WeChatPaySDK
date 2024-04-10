@@ -56,7 +56,7 @@ typedef enum : NSUInteger {
  测试微信支付，所有的参数自己通过demo请求获取
  */
 - (void)WeChatPayTest;
-- (void)WeChatPayTestweChatResult:(void(^)(BOOL result))weChatResult;
+//- (void)WeChatPayTestweChatResult:(void(^)(BOOL result))weChatResult;
 
 /**
  唤起微信支付
@@ -65,7 +65,7 @@ typedef enum : NSUInteger {
  **自行校验是否为空数据
  */
 - (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest;
-- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult;
+//- (void)WakeupWeChatPay:(MSSendPayRequest *)payRequest weChatResult:(void(^)(BOOL result))weChatResult;
 
 
 ///**
