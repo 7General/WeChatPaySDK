@@ -16,6 +16,10 @@
     //注册微信支付
 //    [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
     [[MSWechatPayHelper defaultManager] weChatPaySchemeId:MXWechatAPPID];
+    //调用自检函数
+    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
+        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
+    }];
 //    [[ZZGPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
     return YES;
 }

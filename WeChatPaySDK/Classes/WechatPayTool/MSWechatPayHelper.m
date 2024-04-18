@@ -54,6 +54,9 @@
  * @return 成功返回YES，失败返回NO。
  */
 - (BOOL) registerApp:(NSString *)appid {
+    [WXApi startLogByLevel:WXLogLevelDetail logBlock:^(NSString *log) {
+        NSLog(@"---------WeChatSDK: %@", log);
+    }];
     return  [WXApi registerApp:appid universalLink:@"https://gate.beihujia.com.cn/"];
 }
 
@@ -184,6 +187,18 @@
 
 #pragma mark - Public Methods
 - (void)WeChatPayTest {
+    PayReq *request = [[PayReq alloc] init];
+    request.partnerId = @"1300811201";
+    request.prepayId = @"wx10213200472467b9d41ba9be30bdc70000";
+    request.nonceStr = @"5aAkOMGYhtkNGFVK9jrIdQRPaocNqOT6";
+    request.timeStamp = 1712755920;
+    request.package = @"Sign=WXPay";
+    request.sign = @"F10894CA9BE62CA1F7A1A9FD44F322F6";
+    [WXApi sendReq:request completion:^(BOOL success) {
+        
+    }];
+    
+    
 //    NSString *tradeType = @"APP";                                       //交易类型
 //    NSString *totalFee  = @"1";                                         //交易价格1表示0.01元，10表示0.1元
 //    NSString *tradeNO   = [self generateTradeNO];                       //随机字符串变量 这里最好使用和安卓端一致的生成逻辑

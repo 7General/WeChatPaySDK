@@ -1,5 +1,5 @@
 PODS:
-  - WeChatPaySDK (0.0.8)
+  - WeChatPaySDK (0.0.9)
 
 DEPENDENCIES:
   - WeChatPaySDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WeChatPaySDK: 7fe5787886c4bd9d1ccfa12231c6f26c3a5368fc
+  WeChatPaySDK: 9edaca34550c2766255ee83a7ad5e177365e14b1
 
 PODFILE CHECKSUM: 00454a8ee80dc071c73d6c598fcbafcb85aa51e2
 

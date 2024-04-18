@@ -21,7 +21,7 @@
  */
 
 // 开放平台登录https://open.weixin.qq.com的开发者中心获取APPID
-#define MXWechatAPPID       @"wxbff3f84cc71554c1"
+#define MXWechatAPPID       @"wx6d4e7e840eb7db70"
 // 开放平台登录https://open.weixin.qq.com的开发者中心获取AppSecret。
 #define MXWechatAPPSecret   @"e5d5a34eb45ad58b64d1bf2eef8b7122"
 // 微信支付商户号
