@@ -7,7 +7,7 @@
 //
 
 #import "ZZGViewController.h"
-#import <WeChatPaySDK/MSWechatPayHelper.h>
+
 
 
 @interface ZZGViewController ()
@@ -24,11 +24,7 @@
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    if([MSWechatPayHelper canSupportPay]){
-        NSLog(@"----yes");
-    } else {
-        NSLog(@"----no");
-    }
+   
 
     
     
@@ -40,7 +36,7 @@
 //        NSLog(@"===>>>>>>>%d",result);
 //    }];
     
-    [[MSWechatPayHelper defaultManager] WeChatPayTest];
+//    [[MSWechatPayHelper defaultManager] WeChatPayTest];
     /*
     <xml><app><![CDATA[
      {"appId":"wx16e73c94cb7048ac",

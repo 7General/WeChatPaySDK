@@ -1,16 +1,24 @@
 PODS:
-  - WeChatPaySDK (0.0.9)
+  - WechatOpenSDK (2.0.4)
+  - WeChatPaySDK (2.0.0):
+    - WechatOpenSDK
 
 DEPENDENCIES:
+  - WechatOpenSDK
   - WeChatPaySDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - WechatOpenSDK
 
 EXTERNAL SOURCES:
   WeChatPaySDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WeChatPaySDK: 9edaca34550c2766255ee83a7ad5e177365e14b1
+  WechatOpenSDK: 290989072e87b79d52225a01bb4e5e58f6f88593
+  WeChatPaySDK: 4e9fb26d045b30cb9544a157d0985e21ea2e030f
 
-PODFILE CHECKSUM: 00454a8ee80dc071c73d6c598fcbafcb85aa51e2
+PODFILE CHECKSUM: 68afaa24615584e750a480f13bbd5fee5784fc6b
 
 COCOAPODS: 1.13.0

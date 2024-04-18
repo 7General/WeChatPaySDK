@@ -209,7 +209,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				62CBDE3297FA3E17CBC08752 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,24 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		62CBDE3297FA3E17CBC08752 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WeChatPaySDK_Example/Pods-WeChatPaySDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WeChatPaySDK/WeChatPaySDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeChatPaySDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeChatPaySDK_Example/Pods-WeChatPaySDK_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6A6AE668B88327FC104856EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

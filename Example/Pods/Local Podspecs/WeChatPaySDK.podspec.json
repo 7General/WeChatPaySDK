@@ -1,6 +1,6 @@
 {
   "name": "WeChatPaySDK",
-  "version": "0.0.9",
+  "version": "2.0.0",
   "summary": "MSWeChatPaySDK for weChatPay-SDK",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/7General",
@@ -13,31 +13,16 @@
   },
   "source": {
     "git": "https://github.com/7General/WeChatPaySDK.git",
-    "tag": "0.0.9"
-  },
-  "vendored_libraries": "WeChatPaySDK/Frameworks/libWeChatSDK.a",
-  "libraries": [
-    "z",
-    "c++",
-    "sqlite3.0"
-  ],
-  "frameworks": [
-    "UIKit",
-    "SystemConfiguration",
-    "Foundation",
-    "CoreTelephony",
-    "Security",
-    "CFNetwork",
-    "WebKit",
-    "CoreGraphics"
-  ],
-  "user_target_xcconfig": {
-    "OTHER_LDFLAGS": [
-      "-ObjC -all_load"
-    ]
+    "tag": "2.0.0"
   },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "WeChatPaySDK/Classes/**/*"
+  "source_files": "WeChatPaySDK/Classes/**/*",
+  "static_framework": true,
+  "dependencies": {
+    "WechatOpenSDK": [
+
+    ]
+  }
 }
