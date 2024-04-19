@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #  s.swift_version = '5.0'
   s.source_files = 'WeChatPaySDK/Classes/**/*.{h,m}'
   
-  s.resources = 'WeChatPaySDK/Assets/*', 'WeChatPaySDK/Classes/**/*.xib'
+  #s.resources = 'WeChatPaySDK/Assets/*', 'WeChatPaySDK/Classes/**/*.xib'
   s.frameworks = 'Security', 'CoreGraphics', 'WebKit', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'CoreText', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
   s.libraries = 'c++', 'z'
   
