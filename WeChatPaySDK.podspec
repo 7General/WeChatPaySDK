@@ -23,6 +23,9 @@ Pod::Spec.new do |s|
   
   s.static_framework = true
   s.vendored_libraries = 'WeChatPaySDK/Frameworks/**/*.a'
+  #调用pod lib lint --verbose --use-libraries时报了如下错误：
+  #Ld .../Build/Intermediates.noindex/App.build/Release-iphonesimulator/App.build/Objects-normal/arm64/Binary/App normal arm64
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
   
 #  s.xcconfig = {
 #    'USER_HEADER_SEARCH_PATHS' => 'WeChatPaySDK/Classes/SDK/**/*.h',
