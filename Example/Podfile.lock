@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WeChatPaySDK: 9edaca34550c2766255ee83a7ad5e177365e14b1
+  WeChatPaySDK: fa792a162ce2edba8970fdd87daa87adcb3f66af
 
 PODFILE CHECKSUM: 00454a8ee80dc071c73d6c598fcbafcb85aa51e2
 
