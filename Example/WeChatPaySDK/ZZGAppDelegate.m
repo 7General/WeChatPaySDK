@@ -10,7 +10,7 @@
 
 #import <WeChatPaySDK/MSWeChatPaySDK.h>
 /// 调用WeChatPaySDK的swift文件
-#import "WeChatPaySDK-Swift.h"
+//#import "WeChatPaySDK-Swift.h"
 
 
 
@@ -27,8 +27,8 @@
 //        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
 //    }];
     
-    MSWeChatPayTool * tool = [[MSWeChatPayTool alloc] init];
-    [tool setup];
+//    MSWeChatPayTool * tool = [[MSWeChatPayTool alloc] init];
+//    [tool setup];
     
     return YES;
 }

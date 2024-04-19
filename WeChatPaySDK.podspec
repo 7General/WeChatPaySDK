@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/7General/WeChatPaySDK.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '12.0'
-  s.swift_version = '5.0'
-  s.source_files = 'WeChatPaySDK/Classes/**/*.{h,m,swift}'
+#  s.swift_version = '5.0'
+  s.source_files = 'WeChatPaySDK/Classes/**/*.{h,m}'
   
   s.resources = 'WeChatPaySDK/Assets/*', 'WeChatPaySDK/Classes/**/*.xib'
   s.frameworks = 'Security', 'CoreGraphics', 'WebKit', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'CoreText', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'

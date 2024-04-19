@@ -18,8 +18,7 @@
   "platforms": {
     "ios": "12.0"
   },
-  "swift_versions": "5.0",
-  "source_files": "WeChatPaySDK/Classes/**/*.{h,m,swift}",
+  "source_files": "WeChatPaySDK/Classes/**/*.{h,m}",
   "resources": [
     "WeChatPaySDK/Assets/*",
     "WeChatPaySDK/Classes/**/*.xib"
@@ -42,6 +41,5 @@
     "z"
   ],
   "static_framework": true,
-  "vendored_libraries": "WeChatPaySDK/Frameworks/**/*.a",
-  "swift_version": "5.0"
+  "vendored_libraries": "WeChatPaySDK/Frameworks/**/*.a"
 }
