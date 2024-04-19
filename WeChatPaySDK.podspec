@@ -12,23 +12,18 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wanghuizhou21@163.com' => 'wanghuizhou@guazi.com' }
   s.source           = { :git => 'https://github.com/7General/WeChatPaySDK.git', :tag => s.version.to_s }
-
-  s.vendored_libraries = 'WeChatPaySDK/Frameworks/libWeChatSDK.a'
-  s.libraries = 'z','c++','sqlite3.0'
-  s.frameworks = 'UIKit', 'SystemConfiguration', 'Foundation', 'CoreTelephony', 'Security', 'CFNetwork','WebKit','CoreGraphics'
-  s.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-ObjC -all_load']}
-
+  
   s.ios.deployment_target = '12.0'
-
-s.source_files = 'WeChatPaySDK/Classes/**/*'
-
-  #s.dependency 'AFNetworking'
+  s.swift_version = '5.0'
   
-  ## 模块文件
-  #s.subspec "WechatOpenTool" do |wo|
-  #   wo.source_files = 'WeChatPaySDK/Classes/WechatOpenTool/*.*'
-  #end
-
-  
-  
+  s.source_files = 'WeChatPaySDK/Classes/**/*.{h,swift,m}'
+  s.resources = 'WeChatPaySDK/Assets/*', 'WeChatPaySDK/Classes/**/*.xib'
+  s.frameworks = 'Security', 'CoreGraphics', 'WebKit', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'CoreText', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
+  s.libraries = 'c++', 'z'
+  s.static_framework = true
+  s.vendored_libraries = 'WeChatPaySDK/Classes/SDK/**/*.a'
+  s.xcconfig = {
+      'USER_HEADER_SEARCH_PATHS' => 'WeChatPaySDK/Classes/SDK/**/*.h',
+      'OTHER_LDFLAGS' => '-ObjC'
+  }
 end

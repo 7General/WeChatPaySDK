@@ -7,45 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00637CB5CF089D6EC381FCA963F40327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73F2570114AB49D18F55DDD3A659EC3 /* Foundation.framework */; };
-		02118DB2362059498E71B0B507E4BC0A /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 255829F02BF143A9430B8EBF8A4BEB43 /* WXApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0334DDC34C5130A68A08C49E3259C773 /* XMLDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = A9626468E000B5D977764A3D6870624F /* XMLDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07ECAB25A2D7233739A479EF1D673710 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC451EF680A963980FB7D0D3BD7A4BD /* CFNetwork.framework */; };
-		291A682ACC33C064BFC5C382C800B4DA /* MSWechatConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B45499A8DBE529D3831AD3E02A459D9 /* MSWechatConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E46C1274A9BB1DF4D186E91C2358910 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16AF684C1BC1C7138FCEFF07A5E6578 /* CoreTelephony.framework */; };
-		4602C09C50E30A280AE1962A8A359364 /* MSWechatSignAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D15BA2085BB7B0F6BB27E2CC67559 /* MSWechatSignAdaptor.m */; };
-		524DCE2706F72EB4B43E9253CA593427 /* MSSendPayRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F43F613C38E96FD1AD58E1BC5E9FF7E4 /* MSSendPayRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57C26A2ECD5EC5B6A7A5D97DE6099948 /* MSWechatSignAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9A4953209AA899DEF1C2E0E1D84A03 /* MSWechatSignAdaptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BBFFB37083A6684D89A10C2C880572C /* Pods-WeChatPaySDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C194B9AB2047840DAD94D91232C48A /* Pods-WeChatPaySDK_Tests-dummy.m */; };
-		61C0080544FBD4DDE1449ACEC357176E /* MSWechatPayHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F95EC458DE57864D5F1C948AB173E03 /* MSWechatPayHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62B8639ADE099653291909D479BB440C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16A863C33151C71120A12C33D134A4B /* UIKit.framework */; };
-		793D8847C299016D736257BF70A0FB6D /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB283A40256293E3283A680173A15E7 /* WechatAuthSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D52C30A206A80CCE72721E0D0F4C91C /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1EE020009C5015D7E34828BD4BF8C /* XMLDictionary.m */; };
-		A38BCE09C406F1462143F6FA554965D7 /* MSSendPayRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A133358E282850A05A3822F138F17A /* MSSendPayRequest.m */; };
-		AFA4D6161E8541B0E959B9685546A532 /* MSWechatPayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C632CAF9FDBED6E644E488F5641A6A8B /* MSWechatPayHelper.m */; };
-		B7C395843C9A8595D24C35BC28606298 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F129A919262F32C6C81246EE8B5F323 /* Security.framework */; };
-		B8152B116F4A2B11D795D372B9D254ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7E5D0D48139C65A5BD427EB3383075 /* SystemConfiguration.framework */; };
-		B9C2957FFE58F036C3EBC593FE3CC6E8 /* Pods-WeChatPaySDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B74A9E698DE2ABBAEBB8D39F362AEB /* Pods-WeChatPaySDK_Example-dummy.m */; };
-		BF702568D12A8EF569CB0CA4F5E91262 /* WeChatPaySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 315594DBC86655C3A8E600911C802106 /* WeChatPaySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDDE7997C2460A954AEA44F30F35773C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73F2570114AB49D18F55DDD3A659EC3 /* Foundation.framework */; };
-		DD6A25F49D6D8C6F4D71FA4D7C9EC6D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73F2570114AB49D18F55DDD3A659EC3 /* Foundation.framework */; };
-		E500C26D1AA9C8F335311911A20AC3B3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63251F1D29C707522890CA632769212C /* WebKit.framework */; };
-		EE66CEDDDCFC35E12CE8BF91C9B68D8F /* Pods-WeChatPaySDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE62EC5E2D9258410B52DE4E583CDBE6 /* Pods-WeChatPaySDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F87B720D2D48E6CBCF7EB97C50633C4A /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B13C82359FF1F31DA1C2AB93F7033B8 /* WXApiObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD07F1CBF4A7F13BEDFFD73E13D753CB /* WeChatPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB74CB9C30C7B57C48437B50CC7D138E /* WeChatPaySDK-dummy.m */; };
-		FDE2F1D365E1C839F39308E7E8694B69 /* Pods-WeChatPaySDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3E5C3448354E97DE0DAC86691DFA81 /* Pods-WeChatPaySDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE65D6489FED76F58FECF8D7B406A53A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E6921EC25CC7FDA3EC991E4A8E7A32 /* CoreGraphics.framework */; };
+		00637CB5CF089D6EC381FCA963F40327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0C4E7E15C70EEAF5AB00E49693A310A2 /* MSPayRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8849E6F1CE15D6D56067BAC3573F812C /* MSPayRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16A4BF3C2D3D60C9D88BF9C11528B5AA /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BD11323C71A613583EC97BBF750591D /* WXApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BA9D9659B4E5B3C508FF119903F7EC2 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E14A21512A0BA1D23654AE0F975D9B79 /* WXApiObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BBFFB37083A6684D89A10C2C880572C /* Pods-WeChatPaySDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9486B0AF553FC21194D09B08AB03676 /* Pods-WeChatPaySDK_Tests-dummy.m */; };
+		60E3AEE23A31D9A582F80F9DE09F57E5 /* MSPayRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D54F70D8E22BD3A914501FD0A0198B /* MSPayRequest.m */; };
+		AF9063E2AE548004B956DA0A8DCD25C9 /* WeChatPaySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE8B6267C4BB52C9BE00B7FAA082497 /* WeChatPaySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9C2957FFE58F036C3EBC593FE3CC6E8 /* Pods-WeChatPaySDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CA43D2D9CEDE40C215B5D222440979 /* Pods-WeChatPaySDK_Example-dummy.m */; };
+		C176846C1C12750EBCD4BC80AC948D8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C97E7314F0CBED1D9FE92014F3A64734 /* WechatAuthSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9DB0BA57C37EFE60E310FA9F19E1F2 /* WechatAuthSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDDE7997C2460A954AEA44F30F35773C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CEE9AEDC830699A83DE5796D2BFE4C98 /* WeChatPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65261C1F54F61A452C9A9BE6A87D52ED /* WeChatPaySDK-dummy.m */; };
+		EE66CEDDDCFC35E12CE8BF91C9B68D8F /* Pods-WeChatPaySDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3B4E5F8C346B99CF5DE0C06D52A9A7 /* Pods-WeChatPaySDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D8082574AE8DCE849B4BC9729A01EE /* MSPayManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30EA46FBAFA51867E5F7AB63B93459 /* MSPayManage.swift */; };
+		FDE2F1D365E1C839F39308E7E8694B69 /* Pods-WeChatPaySDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A019198C034CE3DA2ED2AC819B184D /* Pods-WeChatPaySDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		897E7B1695B8339A16AF755C7B9502EB /* PBXContainerItemProxy */ = {
+		9577502136FC00020E8A39C11F2E3CCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 882D7598C2FB08F3F9CD0785545932A1;
 			remoteInfo = WeChatPaySDK;
 		};
-		B891EC4EB32446F63DFC2E3CC88BFCB6 /* PBXContainerItemProxy */ = {
+		AD857BF93DF7D3B8F16A8A14365E7EF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -55,58 +42,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0383AB7A3BE76031F0F51449A88C70E3 /* WeChatPaySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WeChatPaySDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		05FA60606F330190EEBF32D8D90240F4 /* WeChatPaySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeChatPaySDK-prefix.pch"; sourceTree = "<group>"; };
+		04FB5146E6D05CBEE83EDE3D824F5D92 /* Pods-WeChatPaySDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeChatPaySDK_Example.modulemap"; sourceTree = "<group>"; };
 		0BB43ACCCEDC0581DF70A09A84BB7EB2 /* Pods-WeChatPaySDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeChatPaySDK_Example"; path = Pods_WeChatPaySDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E57639A817922B5D4FF04516A6EA938 /* Pods-WeChatPaySDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		0F9A30D0947569C532F0B4918C2F2678 /* WeChatPaySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WeChatPaySDK-Info.plist"; sourceTree = "<group>"; };
-		17B74A9E698DE2ABBAEBB8D39F362AEB /* Pods-WeChatPaySDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeChatPaySDK_Example-dummy.m"; sourceTree = "<group>"; };
-		17C194B9AB2047840DAD94D91232C48A /* Pods-WeChatPaySDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeChatPaySDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		1F95EC458DE57864D5F1C948AB173E03 /* MSWechatPayHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSWechatPayHelper.h; sourceTree = "<group>"; };
-		2036C40D7935A6F63C3CD55D1051A36C /* WeChatPaySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeChatPaySDK.release.xcconfig; sourceTree = "<group>"; };
-		21A133358E282850A05A3822F138F17A /* MSSendPayRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSSendPayRequest.m; sourceTree = "<group>"; };
-		255829F02BF143A9430B8EBF8A4BEB43 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		2F89CA40A4C3BE9A7A07CDBFDC183896 /* Pods-WeChatPaySDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeChatPaySDK_Tests.modulemap"; sourceTree = "<group>"; };
-		315594DBC86655C3A8E600911C802106 /* WeChatPaySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeChatPaySDK-umbrella.h"; sourceTree = "<group>"; };
-		3B3E5C3448354E97DE0DAC86691DFA81 /* Pods-WeChatPaySDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeChatPaySDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3B45499A8DBE529D3831AD3E02A459D9 /* MSWechatConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSWechatConfig.h; sourceTree = "<group>"; };
-		4D0A82D3A3E181BDA703B41E9E8770EE /* Pods-WeChatPaySDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4E548176AC42B772F57462AD13CA5044 /* Pods-WeChatPaySDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Example-Info.plist"; sourceTree = "<group>"; };
-		4FDB9A0A6A41272985CEA144155878D8 /* Pods-WeChatPaySDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		50FA2496BBC76FBC5D92040C598A9202 /* Pods-WeChatPaySDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		51E6921EC25CC7FDA3EC991E4A8E7A32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		63251F1D29C707522890CA632769212C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		6A9D15BA2085BB7B0F6BB27E2CC67559 /* MSWechatSignAdaptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSWechatSignAdaptor.m; sourceTree = "<group>"; };
-		6ACC01A7857815F202E2F9CE646D8F08 /* Pods-WeChatPaySDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeChatPaySDK_Example.modulemap"; sourceTree = "<group>"; };
-		74CB8AF67761DB1D3E7CB1E4E4B88839 /* WeChatPaySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WeChatPaySDK.modulemap; sourceTree = "<group>"; };
-		7907E0D442B229C066892AEB58610443 /* Pods-WeChatPaySDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeChatPaySDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7B13C82359FF1F31DA1C2AB93F7033B8 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		7BB283A40256293E3283A680173A15E7 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		7F129A919262F32C6C81246EE8B5F323 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		116F198976B33550456274244DBE111A /* WeChatPaySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WeChatPaySDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		11A019198C034CE3DA2ED2AC819B184D /* Pods-WeChatPaySDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeChatPaySDK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		122472269C01FA33BE79ACA0DF5A31E8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1F3B4E5F8C346B99CF5DE0C06D52A9A7 /* Pods-WeChatPaySDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeChatPaySDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		29D54F70D8E22BD3A914501FD0A0198B /* MSPayRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSPayRequest.m; sourceTree = "<group>"; };
+		3133B375416A8138660E6D350ECF9B19 /* Pods-WeChatPaySDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeChatPaySDK_Tests.modulemap"; sourceTree = "<group>"; };
+		49B1E13447085EECAB8106B768405A37 /* WeChatPaySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WeChatPaySDK-Info.plist"; sourceTree = "<group>"; };
+		4E15024504F4DAFF6213F3A31394748E /* WeChatPaySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeChatPaySDK.debug.xcconfig; sourceTree = "<group>"; };
+		51376F90903FF9EE0501FD702F1217D2 /* WeChatPaySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WeChatPaySDK.modulemap; sourceTree = "<group>"; };
+		56CA500692A09EA3EDA51EF2C06E93F4 /* Pods-WeChatPaySDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeChatPaySDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5BD11323C71A613583EC97BBF750591D /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		65261C1F54F61A452C9A9BE6A87D52ED /* WeChatPaySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WeChatPaySDK-dummy.m"; sourceTree = "<group>"; };
+		6CF944073264FE46F39EA1554CA17751 /* Pods-WeChatPaySDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7D99F2E6C5E6E20CC1A3518D8CC0361B /* Pods-WeChatPaySDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Tests-Info.plist"; sourceTree = "<group>"; };
+		876D4F38EDB11AEB19C07B049AA5779B /* Pods-WeChatPaySDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8849E6F1CE15D6D56067BAC3573F812C /* MSPayRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSPayRequest.h; sourceTree = "<group>"; };
 		890A94A9C766352BB814F3B74601EE48 /* WeChatPaySDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WeChatPaySDK; path = WeChatPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B9A4953209AA899DEF1C2E0E1D84A03 /* MSWechatSignAdaptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSWechatSignAdaptor.h; sourceTree = "<group>"; };
-		8E614C461047FFD0DFA9A92D5AD87755 /* Pods-WeChatPaySDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeChatPaySDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F253A0915EC5FF7FFD25A9F05AD4D0C /* Pods-WeChatPaySDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A62002DF484D17D1F78E1AD8F87AFC8E /* Pods-WeChatPaySDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A73F2570114AB49D18F55DDD3A659EC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A9626468E000B5D977764A3D6870624F /* XMLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
-		BA7E5D0D48139C65A5BD427EB3383075 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		C632CAF9FDBED6E644E488F5641A6A8B /* MSWechatPayHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSWechatPayHelper.m; sourceTree = "<group>"; };
-		C6E89DD86662F05F09C34C3318D61C96 /* WeChatPaySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeChatPaySDK.debug.xcconfig; sourceTree = "<group>"; };
-		CEC451EF680A963980FB7D0D3BD7A4BD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		D16AF684C1BC1C7138FCEFF07A5E6578 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		D1BE05EE4FF0A1D271761EB4D333E16C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		E16A863C33151C71120A12C33D134A4B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E83EAF0BE9FA0E8196AA820E206D55CD /* Pods-WeChatPaySDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA2575F6B8C3BA2B732492478FCACA2E /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WeChatPaySDK/Frameworks/libWeChatSDK.a; sourceTree = "<group>"; };
-		EA5377090768349CC786DD48A500E843 /* Pods-WeChatPaySDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeChatPaySDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EA720EC3C00160E74C7003E400702D0D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		EE62EC5E2D9258410B52DE4E583CDBE6 /* Pods-WeChatPaySDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeChatPaySDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		F43F613C38E96FD1AD58E1BC5E9FF7E4 /* MSSendPayRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSSendPayRequest.h; sourceTree = "<group>"; };
-		FB74CB9C30C7B57C48437B50CC7D138E /* WeChatPaySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WeChatPaySDK-dummy.m"; sourceTree = "<group>"; };
-		FBC1EE020009C5015D7E34828BD4BF8C /* XMLDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		A3CA43D2D9CEDE40C215B5D222440979 /* Pods-WeChatPaySDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeChatPaySDK_Example-dummy.m"; sourceTree = "<group>"; };
+		AAE8B6267C4BB52C9BE00B7FAA082497 /* WeChatPaySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeChatPaySDK-umbrella.h"; sourceTree = "<group>"; };
+		AE30EA46FBAFA51867E5F7AB63B93459 /* MSPayManage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MSPayManage.swift; sourceTree = "<group>"; };
+		BED96C8E4E58E27D607A8ED9E3042417 /* Pods-WeChatPaySDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C15932E2AC936FDD34B7520791DDA307 /* Pods-WeChatPaySDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6A881AB2D73A49E227F7D44D0990F74 /* WeChatPaySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeChatPaySDK-prefix.pch"; sourceTree = "<group>"; };
+		D145B2F7BA4865A33D63E7713F4C1D5F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D1E501304BBF5121D9B45C6150957B64 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WeChatPaySDK/Classes/SDK/OpenSDK1.8.7.1/libWeChatSDK.a; sourceTree = "<group>"; };
+		D2B3459979695A709108B897A41AB869 /* Pods-WeChatPaySDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D91D265041BB4864D0BE2135D281258A /* Pods-WeChatPaySDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeChatPaySDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D9486B0AF553FC21194D09B08AB03676 /* Pods-WeChatPaySDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeChatPaySDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		DD5F46BE8FEF8691C8BF6D5B6A1C3C17 /* Pods-WeChatPaySDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeChatPaySDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E14A21512A0BA1D23654AE0F975D9B79 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		E93C3EBBC5E2E14E58D561801DC111B7 /* WeChatPaySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeChatPaySDK.release.xcconfig; sourceTree = "<group>"; };
+		EC9DB0BA57C37EFE60E310FA9F19E1F2 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		FD35383F8FE47AF8D1C00EDF0B471170 /* Pods-WeChatPaySDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeChatPaySDK_Tests"; path = Pods_WeChatPaySDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE24F810FDF057DA18637929105CF779 /* Pods-WeChatPaySDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeChatPaySDK_Example-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,31 +99,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		513DB9A87FDD6C7D5C668DA239C552FA /* Frameworks */ = {
+		6FD8966A99D45A89D2757DAD48CD2725 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07ECAB25A2D7233739A479EF1D673710 /* CFNetwork.framework in Frameworks */,
-				FE65D6489FED76F58FECF8D7B406A53A /* CoreGraphics.framework in Frameworks */,
-				3E46C1274A9BB1DF4D186E91C2358910 /* CoreTelephony.framework in Frameworks */,
-				DD6A25F49D6D8C6F4D71FA4D7C9EC6D5 /* Foundation.framework in Frameworks */,
-				B7C395843C9A8595D24C35BC28606298 /* Security.framework in Frameworks */,
-				B8152B116F4A2B11D795D372B9D254ED /* SystemConfiguration.framework in Frameworks */,
-				62B8639ADE099653291909D479BB440C /* UIKit.framework in Frameworks */,
-				E500C26D1AA9C8F335311911A20AC3B3 /* WebKit.framework in Frameworks */,
+				C176846C1C12750EBCD4BC80AC948D8D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10157A637BD518591EECC6B6D78A9174 /* Targets Support Files */ = {
+		0D4A5477F5CE497A9D028B8EABA68B9C /* WeChatPaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				56EF6F67452C38BA500E8716C777F0A6 /* Pods-WeChatPaySDK_Example */,
-				7E14B321A839FEA874FF8FE7DBBFDA63 /* Pods-WeChatPaySDK_Tests */,
+				3A2BD0A20D7C8750CE9C1EF4FBEB4F2C /* Frameworks */,
+				62883605A54AD64D8609FCE26DD7E613 /* Main */,
+				3BA244F892208E99B21F0AED45BC5562 /* Pod */,
+				A561B751B08B7D2CEEAC50530BBCD3F7 /* SDK */,
+				5729E2D0BF2BAD7C2C73E870D4D85F6A /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = WeChatPaySDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		141ADABB105CFFFF8E4E4204B529538F /* Products */ = {
@@ -163,85 +133,109 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		45E54F2F4017D5720E240FED0E0972EC /* WechatPayTool */ = {
+		3A2BD0A20D7C8750CE9C1EF4FBEB4F2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F43F613C38E96FD1AD58E1BC5E9FF7E4 /* MSSendPayRequest.h */,
-				21A133358E282850A05A3822F138F17A /* MSSendPayRequest.m */,
-				3B45499A8DBE529D3831AD3E02A459D9 /* MSWechatConfig.h */,
-				1F95EC458DE57864D5F1C948AB173E03 /* MSWechatPayHelper.h */,
-				C632CAF9FDBED6E644E488F5641A6A8B /* MSWechatPayHelper.m */,
-				8B9A4953209AA899DEF1C2E0E1D84A03 /* MSWechatSignAdaptor.h */,
-				6A9D15BA2085BB7B0F6BB27E2CC67559 /* MSWechatSignAdaptor.m */,
-				A9626468E000B5D977764A3D6870624F /* XMLDictionary.h */,
-				FBC1EE020009C5015D7E34828BD4BF8C /* XMLDictionary.m */,
+				D1E501304BBF5121D9B45C6150957B64 /* libWeChatSDK.a */,
 			);
-			name = WechatPayTool;
-			path = WeChatPaySDK/Classes/WechatPayTool;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		56EF6F67452C38BA500E8716C777F0A6 /* Pods-WeChatPaySDK_Example */ = {
+		3BA244F892208E99B21F0AED45BC5562 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				6ACC01A7857815F202E2F9CE646D8F08 /* Pods-WeChatPaySDK_Example.modulemap */,
-				EA5377090768349CC786DD48A500E843 /* Pods-WeChatPaySDK_Example-acknowledgements.markdown */,
-				A62002DF484D17D1F78E1AD8F87AFC8E /* Pods-WeChatPaySDK_Example-acknowledgements.plist */,
-				17B74A9E698DE2ABBAEBB8D39F362AEB /* Pods-WeChatPaySDK_Example-dummy.m */,
-				7907E0D442B229C066892AEB58610443 /* Pods-WeChatPaySDK_Example-frameworks.sh */,
-				4E548176AC42B772F57462AD13CA5044 /* Pods-WeChatPaySDK_Example-Info.plist */,
-				EE62EC5E2D9258410B52DE4E583CDBE6 /* Pods-WeChatPaySDK_Example-umbrella.h */,
-				4FDB9A0A6A41272985CEA144155878D8 /* Pods-WeChatPaySDK_Example.debug.xcconfig */,
-				9F253A0915EC5FF7FFD25A9F05AD4D0C /* Pods-WeChatPaySDK_Example.release.xcconfig */,
+				D145B2F7BA4865A33D63E7713F4C1D5F /* LICENSE */,
+				122472269C01FA33BE79ACA0DF5A31E8 /* README.md */,
+				116F198976B33550456274244DBE111A /* WeChatPaySDK.podspec */,
 			);
-			name = "Pods-WeChatPaySDK_Example";
-			path = "Target Support Files/Pods-WeChatPaySDK_Example";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		7E14B321A839FEA874FF8FE7DBBFDA63 /* Pods-WeChatPaySDK_Tests */ = {
+		5729E2D0BF2BAD7C2C73E870D4D85F6A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F89CA40A4C3BE9A7A07CDBFDC183896 /* Pods-WeChatPaySDK_Tests.modulemap */,
-				8E614C461047FFD0DFA9A92D5AD87755 /* Pods-WeChatPaySDK_Tests-acknowledgements.markdown */,
-				E83EAF0BE9FA0E8196AA820E206D55CD /* Pods-WeChatPaySDK_Tests-acknowledgements.plist */,
-				17C194B9AB2047840DAD94D91232C48A /* Pods-WeChatPaySDK_Tests-dummy.m */,
-				0E57639A817922B5D4FF04516A6EA938 /* Pods-WeChatPaySDK_Tests-Info.plist */,
-				3B3E5C3448354E97DE0DAC86691DFA81 /* Pods-WeChatPaySDK_Tests-umbrella.h */,
-				4D0A82D3A3E181BDA703B41E9E8770EE /* Pods-WeChatPaySDK_Tests.debug.xcconfig */,
-				50FA2496BBC76FBC5D92040C598A9202 /* Pods-WeChatPaySDK_Tests.release.xcconfig */,
-			);
-			name = "Pods-WeChatPaySDK_Tests";
-			path = "Target Support Files/Pods-WeChatPaySDK_Tests";
-			sourceTree = "<group>";
-		};
-		BBC51ADF7B37D64504232F4E29FC83F3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				74CB8AF67761DB1D3E7CB1E4E4B88839 /* WeChatPaySDK.modulemap */,
-				FB74CB9C30C7B57C48437B50CC7D138E /* WeChatPaySDK-dummy.m */,
-				0F9A30D0947569C532F0B4918C2F2678 /* WeChatPaySDK-Info.plist */,
-				05FA60606F330190EEBF32D8D90240F4 /* WeChatPaySDK-prefix.pch */,
-				315594DBC86655C3A8E600911C802106 /* WeChatPaySDK-umbrella.h */,
-				C6E89DD86662F05F09C34C3318D61C96 /* WeChatPaySDK.debug.xcconfig */,
-				2036C40D7935A6F63C3CD55D1051A36C /* WeChatPaySDK.release.xcconfig */,
+				51376F90903FF9EE0501FD702F1217D2 /* WeChatPaySDK.modulemap */,
+				65261C1F54F61A452C9A9BE6A87D52ED /* WeChatPaySDK-dummy.m */,
+				49B1E13447085EECAB8106B768405A37 /* WeChatPaySDK-Info.plist */,
+				C6A881AB2D73A49E227F7D44D0990F74 /* WeChatPaySDK-prefix.pch */,
+				AAE8B6267C4BB52C9BE00B7FAA082497 /* WeChatPaySDK-umbrella.h */,
+				4E15024504F4DAFF6213F3A31394748E /* WeChatPaySDK.debug.xcconfig */,
+				E93C3EBBC5E2E14E58D561801DC111B7 /* WeChatPaySDK.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/WeChatPaySDK";
 			sourceTree = "<group>";
 		};
-		C0A8E7E9A32924C3AD56276C8F301AC5 /* Frameworks */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EA2575F6B8C3BA2B732492478FCACA2E /* libWeChatSDK.a */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		62883605A54AD64D8609FCE26DD7E613 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE30EA46FBAFA51867E5F7AB63B93459 /* MSPayManage.swift */,
+				8849E6F1CE15D6D56067BAC3573F812C /* MSPayRequest.h */,
+				29D54F70D8E22BD3A914501FD0A0198B /* MSPayRequest.m */,
+			);
+			name = Main;
+			path = WeChatPaySDK/Classes/Main;
+			sourceTree = "<group>";
+		};
+		6C61BA7CF309852F7F7CEC9345DD5E93 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ED784C00486CA5F4C80D8DBB2920EDB /* Pods-WeChatPaySDK_Example */,
+				E038488B0F36036AB72065CAE30E2631 /* Pods-WeChatPaySDK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8ED784C00486CA5F4C80D8DBB2920EDB /* Pods-WeChatPaySDK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				04FB5146E6D05CBEE83EDE3D824F5D92 /* Pods-WeChatPaySDK_Example.modulemap */,
+				56CA500692A09EA3EDA51EF2C06E93F4 /* Pods-WeChatPaySDK_Example-acknowledgements.markdown */,
+				6CF944073264FE46F39EA1554CA17751 /* Pods-WeChatPaySDK_Example-acknowledgements.plist */,
+				A3CA43D2D9CEDE40C215B5D222440979 /* Pods-WeChatPaySDK_Example-dummy.m */,
+				FE24F810FDF057DA18637929105CF779 /* Pods-WeChatPaySDK_Example-Info.plist */,
+				1F3B4E5F8C346B99CF5DE0C06D52A9A7 /* Pods-WeChatPaySDK_Example-umbrella.h */,
+				DD5F46BE8FEF8691C8BF6D5B6A1C3C17 /* Pods-WeChatPaySDK_Example.debug.xcconfig */,
+				BED96C8E4E58E27D607A8ED9E3042417 /* Pods-WeChatPaySDK_Example.release.xcconfig */,
+			);
+			name = "Pods-WeChatPaySDK_Example";
+			path = "Target Support Files/Pods-WeChatPaySDK_Example";
+			sourceTree = "<group>";
+		};
+		A561B751B08B7D2CEEAC50530BBCD3F7 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				CD42EF6F743DB6CE9EA55ACC8D25E0AF /* OpenSDK1.8.7.1 */,
+			);
+			name = SDK;
+			path = WeChatPaySDK/Classes/SDK;
 			sourceTree = "<group>";
 		};
 		CBEE29204E91D6C5192627707CC2CB37 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D51661B85DDFFD7E61CFB258EE5B3AAD /* WeChatPaySDK */,
+				0D4A5477F5CE497A9D028B8EABA68B9C /* WeChatPaySDK */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CD42EF6F743DB6CE9EA55ACC8D25E0AF /* OpenSDK1.8.7.1 */ = {
+			isa = PBXGroup;
+			children = (
+				EC9DB0BA57C37EFE60E310FA9F19E1F2 /* WechatAuthSDK.h */,
+				5BD11323C71A613583EC97BBF750591D /* WXApi.h */,
+				E14A21512A0BA1D23654AE0F975D9B79 /* WXApiObject.h */,
+			);
+			name = OpenSDK1.8.7.1;
+			path = OpenSDK1.8.7.1;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -249,93 +243,56 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				CBEE29204E91D6C5192627707CC2CB37 /* Development Pods */,
-				F119B4A0ABE017AECEE69836596133B2 /* Frameworks */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				141ADABB105CFFFF8E4E4204B529538F /* Products */,
-				10157A637BD518591EECC6B6D78A9174 /* Targets Support Files */,
+				6C61BA7CF309852F7F7CEC9345DD5E93 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D51661B85DDFFD7E61CFB258EE5B3AAD /* WeChatPaySDK */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0A8E7E9A32924C3AD56276C8F301AC5 /* Frameworks */,
-				EBE236DEE47BF930A57AEEF0B7879B5E /* Pod */,
-				BBC51ADF7B37D64504232F4E29FC83F3 /* Support Files */,
-				ECC8C2AEB0BD939EDCAE3A2D140F0221 /* WechatOpenTool */,
-				45E54F2F4017D5720E240FED0E0972EC /* WechatPayTool */,
-			);
-			name = WeChatPaySDK;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		E8032A22199FF3117BAB46C8522AA3C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC451EF680A963980FB7D0D3BD7A4BD /* CFNetwork.framework */,
-				51E6921EC25CC7FDA3EC991E4A8E7A32 /* CoreGraphics.framework */,
-				D16AF684C1BC1C7138FCEFF07A5E6578 /* CoreTelephony.framework */,
-				A73F2570114AB49D18F55DDD3A659EC3 /* Foundation.framework */,
-				7F129A919262F32C6C81246EE8B5F323 /* Security.framework */,
-				BA7E5D0D48139C65A5BD427EB3383075 /* SystemConfiguration.framework */,
-				E16A863C33151C71120A12C33D134A4B /* UIKit.framework */,
-				63251F1D29C707522890CA632769212C /* WebKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		EBE236DEE47BF930A57AEEF0B7879B5E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				EA720EC3C00160E74C7003E400702D0D /* LICENSE */,
-				D1BE05EE4FF0A1D271761EB4D333E16C /* README.md */,
-				0383AB7A3BE76031F0F51449A88C70E3 /* WeChatPaySDK.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		ECC8C2AEB0BD939EDCAE3A2D140F0221 /* WechatOpenTool */ = {
-			isa = PBXGroup;
-			children = (
-				7BB283A40256293E3283A680173A15E7 /* WechatAuthSDK.h */,
-				255829F02BF143A9430B8EBF8A4BEB43 /* WXApi.h */,
-				7B13C82359FF1F31DA1C2AB93F7033B8 /* WXApiObject.h */,
-			);
-			name = WechatOpenTool;
-			path = WeChatPaySDK/Classes/WechatOpenTool;
-			sourceTree = "<group>";
-		};
-		F119B4A0ABE017AECEE69836596133B2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E8032A22199FF3117BAB46C8522AA3C1 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E038488B0F36036AB72065CAE30E2631 /* Pods-WeChatPaySDK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3133B375416A8138660E6D350ECF9B19 /* Pods-WeChatPaySDK_Tests.modulemap */,
+				D91D265041BB4864D0BE2135D281258A /* Pods-WeChatPaySDK_Tests-acknowledgements.markdown */,
+				C15932E2AC936FDD34B7520791DDA307 /* Pods-WeChatPaySDK_Tests-acknowledgements.plist */,
+				D9486B0AF553FC21194D09B08AB03676 /* Pods-WeChatPaySDK_Tests-dummy.m */,
+				7D99F2E6C5E6E20CC1A3518D8CC0361B /* Pods-WeChatPaySDK_Tests-Info.plist */,
+				11A019198C034CE3DA2ED2AC819B184D /* Pods-WeChatPaySDK_Tests-umbrella.h */,
+				D2B3459979695A709108B897A41AB869 /* Pods-WeChatPaySDK_Tests.debug.xcconfig */,
+				876D4F38EDB11AEB19C07B049AA5779B /* Pods-WeChatPaySDK_Tests.release.xcconfig */,
+			);
+			name = "Pods-WeChatPaySDK_Tests";
+			path = "Target Support Files/Pods-WeChatPaySDK_Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		03347B7F39A3A3859B9C7B24CF965E6D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				524DCE2706F72EB4B43E9253CA593427 /* MSSendPayRequest.h in Headers */,
-				291A682ACC33C064BFC5C382C800B4DA /* MSWechatConfig.h in Headers */,
-				61C0080544FBD4DDE1449ACEC357176E /* MSWechatPayHelper.h in Headers */,
-				57C26A2ECD5EC5B6A7A5D97DE6099948 /* MSWechatSignAdaptor.h in Headers */,
-				793D8847C299016D736257BF70A0FB6D /* WechatAuthSDK.h in Headers */,
-				BF702568D12A8EF569CB0CA4F5E91262 /* WeChatPaySDK-umbrella.h in Headers */,
-				02118DB2362059498E71B0B507E4BC0A /* WXApi.h in Headers */,
-				F87B720D2D48E6CBCF7EB97C50633C4A /* WXApiObject.h in Headers */,
-				0334DDC34C5130A68A08C49E3259C773 /* XMLDictionary.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		180AED22586323160634E56EB6D4F55C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE66CEDDDCFC35E12CE8BF91C9B68D8F /* Pods-WeChatPaySDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7733C1DEA3E6F4CB6B80322A04D52AD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C4E7E15C70EEAF5AB00E49693A310A2 /* MSPayRequest.h in Headers */,
+				C97E7314F0CBED1D9FE92014F3A64734 /* WechatAuthSDK.h in Headers */,
+				AF9063E2AE548004B956DA0A8DCD25C9 /* WeChatPaySDK-umbrella.h in Headers */,
+				16A4BF3C2D3D60C9D88BF9C11528B5AA /* WXApi.h in Headers */,
+				3BA9D9659B4E5B3C508FF119903F7EC2 /* WXApiObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8601BA5CA2698FF0F5DC4A5511080B5C /* PBXTargetDependency */,
+				61C48137697572E720299E04F0A61787 /* PBXTargetDependency */,
 			);
 			name = "Pods-WeChatPaySDK_Tests";
 			productName = Pods_WeChatPaySDK_Tests;
@@ -371,12 +328,12 @@
 		};
 		882D7598C2FB08F3F9CD0785545932A1 /* WeChatPaySDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43239247BDBB0295A241B50CD1B331B3 /* Build configuration list for PBXNativeTarget "WeChatPaySDK" */;
+			buildConfigurationList = 067E9F590756940DB6A97C4298542095 /* Build configuration list for PBXNativeTarget "WeChatPaySDK" */;
 			buildPhases = (
-				03347B7F39A3A3859B9C7B24CF965E6D /* Headers */,
-				C987016F355D40353A0E84B25AE2BAD6 /* Sources */,
-				513DB9A87FDD6C7D5C668DA239C552FA /* Frameworks */,
-				066B197E69B104FD518E7CAD31A4ACDC /* Resources */,
+				7733C1DEA3E6F4CB6B80322A04D52AD2 /* Headers */,
+				A2C7427CA376B2ECB01A1FF60926A07E /* Sources */,
+				6FD8966A99D45A89D2757DAD48CD2725 /* Frameworks */,
+				2F750522222002107EEEE06287D37F08 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -399,7 +356,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				14A2239E9C35BC9E15B2D3FB2C3DDF40 /* PBXTargetDependency */,
+				B4FDEF836748E9F06DD5A22998834232 /* PBXTargetDependency */,
 			);
 			name = "Pods-WeChatPaySDK_Example";
 			productName = Pods_WeChatPaySDK_Example;
@@ -436,14 +393,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		066B197E69B104FD518E7CAD31A4ACDC /* Resources */ = {
+		275F198B067FB1DE804E52B3A2EB402E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		275F198B067FB1DE804E52B3A2EB402E /* Resources */ = {
+		2F750522222002107EEEE06287D37F08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,32 +433,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C987016F355D40353A0E84B25AE2BAD6 /* Sources */ = {
+		A2C7427CA376B2ECB01A1FF60926A07E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38BCE09C406F1462143F6FA554965D7 /* MSSendPayRequest.m in Sources */,
-				AFA4D6161E8541B0E959B9685546A532 /* MSWechatPayHelper.m in Sources */,
-				4602C09C50E30A280AE1962A8A359364 /* MSWechatSignAdaptor.m in Sources */,
-				FD07F1CBF4A7F13BEDFFD73E13D753CB /* WeChatPaySDK-dummy.m in Sources */,
-				8D52C30A206A80CCE72721E0D0F4C91C /* XMLDictionary.m in Sources */,
+				F8D8082574AE8DCE849B4BC9729A01EE /* MSPayManage.swift in Sources */,
+				60E3AEE23A31D9A582F80F9DE09F57E5 /* MSPayRequest.m in Sources */,
+				CEE9AEDC830699A83DE5796D2BFE4C98 /* WeChatPaySDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14A2239E9C35BC9E15B2D3FB2C3DDF40 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WeChatPaySDK;
-			target = 882D7598C2FB08F3F9CD0785545932A1 /* WeChatPaySDK */;
-			targetProxy = 897E7B1695B8339A16AF755C7B9502EB /* PBXContainerItemProxy */;
-		};
-		8601BA5CA2698FF0F5DC4A5511080B5C /* PBXTargetDependency */ = {
+		61C48137697572E720299E04F0A61787 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WeChatPaySDK_Example";
 			target = CB79CFA7C5CFF74AE61A81E678B1FBF0 /* Pods-WeChatPaySDK_Example */;
-			targetProxy = B891EC4EB32446F63DFC2E3CC88BFCB6 /* PBXContainerItemProxy */;
+			targetProxy = AD857BF93DF7D3B8F16A8A14365E7EF2 /* PBXContainerItemProxy */;
+		};
+		B4FDEF836748E9F06DD5A22998834232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WeChatPaySDK;
+			target = 882D7598C2FB08F3F9CD0785545932A1 /* WeChatPaySDK */;
+			targetProxy = 9577502136FC00020E8A39C11F2E3CCA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -574,7 +529,7 @@
 		};
 		33F80C887A4C5DD1BB2559B58D674AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50FA2496BBC76FBC5D92040C598A9202 /* Pods-WeChatPaySDK_Tests.release.xcconfig */;
+			baseConfigurationReference = 876D4F38EDB11AEB19C07B049AA5779B /* Pods-WeChatPaySDK_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -609,7 +564,7 @@
 		};
 		38B30B8F72D864594E2FBECE5D52A0A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FDB9A0A6A41272985CEA144155878D8 /* Pods-WeChatPaySDK_Example.debug.xcconfig */;
+			baseConfigurationReference = DD5F46BE8FEF8691C8BF6D5B6A1C3C17 /* Pods-WeChatPaySDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -643,7 +598,7 @@
 		};
 		47D56A9A4F0A57C07473A7D883924D57 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0A82D3A3E181BDA703B41E9E8770EE /* Pods-WeChatPaySDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = D2B3459979695A709108B897A41AB869 /* Pods-WeChatPaySDK_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -674,6 +629,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		4EE5DAC153A4963FD9ACF2E9A9A7F221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93C3EBBC5E2E14E58D561801DC111B7 /* WeChatPaySDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WeChatPaySDK/WeChatPaySDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WeChatPaySDK/WeChatPaySDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/WeChatPaySDK/WeChatPaySDK.modulemap";
+				PRODUCT_MODULE_NAME = WeChatPaySDK;
+				PRODUCT_NAME = WeChatPaySDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -739,7 +728,7 @@
 		};
 		74C88236B4280B63B58F3A2CD88B1522 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F253A0915EC5FF7FFD25A9F05AD4D0C /* Pods-WeChatPaySDK_Example.release.xcconfig */;
+			baseConfigurationReference = BED96C8E4E58E27D607A8ED9E3042417 /* Pods-WeChatPaySDK_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -772,9 +761,9 @@
 			};
 			name = Release;
 		};
-		78D809F3F3F2D9C92260A80CE319FEAB /* Release */ = {
+		B65F8AE27E79B7C0F6BFC65532848625 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2036C40D7935A6F63C3CD55D1051A36C /* WeChatPaySDK.release.xcconfig */;
+			baseConfigurationReference = 4E15024504F4DAFF6213F3A31394748E /* WeChatPaySDK.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -791,44 +780,14 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/WeChatPaySDK/WeChatPaySDK.modulemap";
 				PRODUCT_MODULE_NAME = WeChatPaySDK;
 				PRODUCT_NAME = WeChatPaySDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9F64D1DC75BE94FFD2635D0B30DCBAEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6E89DD86662F05F09C34C3318D61C96 /* WeChatPaySDK.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WeChatPaySDK/WeChatPaySDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WeChatPaySDK/WeChatPaySDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WeChatPaySDK/WeChatPaySDK.modulemap";
-				PRODUCT_MODULE_NAME = WeChatPaySDK;
-				PRODUCT_NAME = WeChatPaySDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -838,20 +797,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		067E9F590756940DB6A97C4298542095 /* Build configuration list for PBXNativeTarget "WeChatPaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B65F8AE27E79B7C0F6BFC65532848625 /* Debug */,
+				4EE5DAC153A4963FD9ACF2E9A9A7F221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0B53EAC4E384234137BB717897D76C57 /* Build configuration list for PBXNativeTarget "Pods-WeChatPaySDK_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47D56A9A4F0A57C07473A7D883924D57 /* Debug */,
 				33F80C887A4C5DD1BB2559B58D674AA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43239247BDBB0295A241B50CD1B331B3 /* Build configuration list for PBXNativeTarget "WeChatPaySDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9F64D1DC75BE94FFD2635D0B30DCBAEF /* Debug */,
-				78D809F3F3F2D9C92260A80CE319FEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

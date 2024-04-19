@@ -7,20 +7,29 @@
 //
 
 #import "ZZGAppDelegate.h"
-#import <WeChatPaySDK/MSWechatConfig.h>
+//#import "WXApi.h"
+#import "WeChatPaySDK-Swift.h"
+#import "WeChatPaySDK-umbrella.h"
+
+
+
 
 @implementation ZZGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //注册微信支付
-//    [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
-    [[MSWechatPayHelper defaultManager] weChatPaySchemeId:MXWechatAPPID];
-    //调用自检函数
-    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
-        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
-    }];
-//    [[ZZGPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
+    
+    MSPayManage * manage = [[MSPayManage alloc] init];
+    [manage setup];
+    
+    MSPayRequest *request = [[MSPayRequest alloc] init];
+    [request goschool];
+//    [WXApi registerApp:@"wx6d4e7e840eb7db70" universalLink:@"https://whz.wangxiaoguang.com"];
+//    //调用自检函数
+//    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
+//        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
+//    }];
+    
     return YES;
 }
 
@@ -53,28 +62,28 @@
 
 
 #pragma mark - 微信支付回调
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    
-    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
-//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
-//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
-}
-
-// NOTE: 9.0以后使用新API接口
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
-{
-    /*
-     url.host:pay
-     wxbff3f84cc71554c1://pay/?returnKey=&ret=0
-     */
-    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
-//    return [[ZZGPayHelper defaultManager] handlerUrl:url];
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    
+//    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+////    return [[ZZGPayHelper defaultManager] handlerUrl:url];
+//}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+//{
+//    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+////    return [[ZZGPayHelper defaultManager] handlerUrl:url];
+//}
+//
+//// NOTE: 9.0以后使用新API接口
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+//{
+//    /*
+//     url.host:pay
+//     wxbff3f84cc71554c1://pay/?returnKey=&ret=0
+//     */
+//    return [[MSWechatPayHelper defaultManager] handleOpenUrl:url];
+////    return [[ZZGPayHelper defaultManager] handlerUrl:url];
+//}
 
 @end

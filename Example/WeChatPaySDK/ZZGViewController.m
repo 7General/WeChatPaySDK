@@ -1,13 +1,6 @@
-//
-//  ZZGViewController.m
-//  WeChatPaySDK
-//
-//  Created by wanghuizhou21@163.com on 07/12/2018.
-//  Copyright (c) 2018 wanghuizhou21@163.com. All rights reserved.
-//
 
 #import "ZZGViewController.h"
-#import <WeChatPaySDK/MSWechatPayHelper.h>
+
 
 
 @interface ZZGViewController ()
@@ -24,11 +17,7 @@
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    if([MSWechatPayHelper canSupportPay]){
-        NSLog(@"----yes");
-    } else {
-        NSLog(@"----no");
-    }
+ 
 
     
     
@@ -40,7 +29,7 @@
 //        NSLog(@"===>>>>>>>%d",result);
 //    }];
     
-    [[MSWechatPayHelper defaultManager] WeChatPayTest];
+    
     /*
     <xml><app><![CDATA[
      {"appId":"wx16e73c94cb7048ac",
