@@ -8,8 +8,8 @@
 import UIKit
 // 这里不用引用oc的头文件
 
-@objc public class MSPayManage: NSObject {
-    @objc public func setup(){
+public class MSPayManage: NSObject {
+      @objc  public func setup(){
         print("开始注册")
         WXApi.registerApp("wx6d4e7e840eb7db70", universalLink: "https://whz.wangxiaoguang.com")
         
