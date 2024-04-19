@@ -11,6 +11,7 @@
 #endif
 
 #import "MSWechatPayHelper.h"
+#import "MSWeChatPaySDK.h"
 #import "WechatAuthSDK.h"
 #import "WXApi.h"
 #import "WXApiObject.h"

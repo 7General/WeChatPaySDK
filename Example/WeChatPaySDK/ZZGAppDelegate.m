@@ -7,7 +7,12 @@
 //
 
 #import "ZZGAppDelegate.h"
-#import <WeChatPaySDK/MSWechatPayHelper.h>
+
+#import <WeChatPaySDK/MSWeChatPaySDK.h>
+/// 调用WeChatPaySDK的swift文件
+#import "WeChatPaySDK-Swift.h"
+
+
 
 @implementation ZZGAppDelegate
 
@@ -15,13 +20,16 @@
 {
     //注册微信支付
     [[MSWechatPayHelper defaultManager] initWithWeChat:@"" universalLink:@""];
-//    [[MSWechatPayHelper defaultManager] weChatPaySchemeId:MXWechatAPPID];
+    [[MSWechatPayHelper defaultManager] checkIfNeed];
     
-    //调用自检函数
-    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
-        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
-    }];
-//    [[ZZGPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
+//    [WXApi registerApp:@"wx6d4e7e840eb7db70" universalLink:@"https://whz.wangxiaoguang.com/"];
+//    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
+//        NSLog(@">>>>>>>%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
+//    }];
+    
+    MSWeChatPayTool * tool = [[MSWeChatPayTool alloc] init];
+    [tool setup];
+    
     return YES;
 }
 
