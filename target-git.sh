@@ -21,6 +21,21 @@ echo "最新版本:${build_version// /.}"
 new="${build_version// /.}"
 sed -i.bak "s/s.version *= *'[0-9.]*'/s.version = '${new}'/" "./${POD_SOURCE_NAME}.podspec"
 
+echo "======commit change======"
+git add .
+git commit -m "*******开始tag"
+git push
+
+# 检查推送是否成功
+if [ $? -eq 0 ]; then
+  echo "代码提交并推送成功。"
+else
+  echo "错误: 推送失败，请检查你的网络连接和远程仓库配置。"
+fi
+
+echo "======commit change======"
+
+
 
 echo "======commit tag======"
 tag_name="${build_version// /.}"
