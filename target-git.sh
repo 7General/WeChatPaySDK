@@ -23,7 +23,7 @@ sed -i.bak "s/s.version *= *'[0-9.]*'/s.version = '${new}'/" "./${POD_SOURCE_NAM
 
 echo "======commit meessage======"
 git add .
-git commit -m "auto-commit meessage-shell> ${build_version}"
+git commit -m "auto-commit meessage> ${build_version} by shell"
 git push
 if [ $? -eq 0 ]; then
   echo "代码提交并推送成功。"
