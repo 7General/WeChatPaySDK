@@ -33,16 +33,16 @@ echo "======commit tag======"
 
 echo "======rebase======"
 
-read -p "请输入你想rebase的目标分支名称: " target_branch
+read -p "请输入你想rebase的目标分支名称: " TARGET_BRANCH
 
 # 1=========检查用户是否输入了内容
-if [ -z "$target_branch" ]; then
+if [ -z "$TARGET_BRANCH" ]; then
   echo "错误: 你必须输入一个分支名称。"
   exit 1
 fi
 
 # 打印输入的分支名称
-echo "你输入的分支名称是: $target_branch"
+echo "你输入的分支名称是: $TARGET_BRANCH"
 
 # 2========切换到master分支
 echo "切换到master分支..."
