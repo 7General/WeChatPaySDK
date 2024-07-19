@@ -15,7 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //注册微信支付
+    //注册微信支付123
 //    [[MSWechatPayHelper defaultManager] initWithWeChatPaySchemeId:MXWechatAPPID];
 //    [[MSWechatPayHelper defaultManager] weChatPaySchemeId:MXWechatAPPID];
     //调用自检函数
