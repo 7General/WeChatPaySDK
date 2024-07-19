@@ -70,6 +70,8 @@ if [ $? -ne 0 ]; then
 fi
 echo "======rebase end======"
 
+echo "======build_config end======"
+
 echo "************rebse-info****************"
 
 echo "old-version:${OLD_BUILD_VERSION}"
@@ -80,5 +82,3 @@ echo "合并分支:$TARGET_BRANCH"
 echo "添加tag:${tag_name}"
 
 echo "************rebse-info****************"
-
-echo "======build_config end======"
