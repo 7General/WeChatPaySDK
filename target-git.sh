@@ -38,7 +38,7 @@ echo "======commit tag======"
 tag_name="${build_version// /.}"
 echo "Creating tag: $tag_name"
 
-git tag -m "[feat]$tag_name" -a ${tag_name}
+git tag -m "[feat] $tag_name" -a ${tag_name}
 git push --tags 
 echo "======commit tag======"
 
