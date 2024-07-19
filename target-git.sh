@@ -21,10 +21,10 @@ echo "最新版本:${build_version// /.}"
 new="${build_version// /.}"
 sed -i.bak "s/s.version *= *'[0-9.]*'/s.version = '${new}'/" "./${POD_SOURCE_NAME}.podspec"
 
-
+tag_name="${build_version// /.}"
 echo "======commit meessage======"
 git add .
-git commit -m "auto-commit meessage> ${build_version} by shell"
+git commit -m "auto-commit meessage> ${tag_name} by shell"
 git push
 if [ $? -eq 0 ]; then
   echo "代码提交并推送成功。"
@@ -35,7 +35,6 @@ echo "======commit meessage======"
 
 
 echo "======commit tag======"
-tag_name="${build_version// /.}"
 echo "Creating tag: $tag_name"
 
 git tag -m "[feat] $tag_name" -a ${tag_name}
