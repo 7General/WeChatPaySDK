@@ -44,28 +44,14 @@ echo "======commit tag======"
 
 
 echo "======rebase======"
-
-# read -p "请输入你想rebase的目标分支名称: " TARGET_BRANCH
-
-# # 1=========检查用户是否输入了内容
-# if [ -z "$TARGET_BRANCH" ]; then
-#   echo "错误: 你必须输入一个分支名称。"
-#   exit 1
-# fi
-
-# # 打印输入的分支名称
-# echo "你输入的分支名称是: $TARGET_BRANCH"
-
-TARGET_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-
 # 2========切换到master分支
+TARGET_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 echo "切换到master分支..."
 git checkout master
 if [ $? -ne 0 ]; then
   echo "错误: 切换到master分支失败。"
   exit 1
 fi
-
 
 # 3=========对指定的目标分支进行rebase
 echo "正在rebase分支$TARGET_BRANCH到master..."
@@ -75,7 +61,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-
 # 4=========提交rebase的更改
 echo "推送rebase的更改到远程仓库..."
 git push --force
@@ -83,7 +68,17 @@ if [ $? -ne 0 ]; then
   echo "错误: 推送更改到远程仓库失败。"
   exit 1
 fi
-
 echo "======rebase end======"
+
+echo "************rebse-info****************"
+
+echo "old-version:${OLD_BUILD_VERSION}"
+echo "new-version:${build_version}"
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "当前分支:${CURRENT_BRANCH}"
+echo "合并分支:$TARGET_BRANCH"
+echo "添加tag:${tag_name}"
+
+echo "************rebse-info****************"
 
 echo "======build_config end======"
