@@ -21,6 +21,7 @@ echo "最新版本:${build_version// /.}"
 new="${build_version// /.}"
 sed -i.bak "s/s.version *= *'[0-9.]*'/s.version = '${new}'/" "./${POD_SOURCE_NAME}.podspec"
 
+
 echo "======commit meessage======"
 git add .
 git commit -m "auto-commit meessage> ${build_version} by shell"
@@ -44,16 +45,18 @@ echo "======commit tag======"
 
 echo "======rebase======"
 
-read -p "请输入你想rebase的目标分支名称: " TARGET_BRANCH
+# read -p "请输入你想rebase的目标分支名称: " TARGET_BRANCH
 
-# 1=========检查用户是否输入了内容
-if [ -z "$TARGET_BRANCH" ]; then
-  echo "错误: 你必须输入一个分支名称。"
-  exit 1
-fi
+# # 1=========检查用户是否输入了内容
+# if [ -z "$TARGET_BRANCH" ]; then
+#   echo "错误: 你必须输入一个分支名称。"
+#   exit 1
+# fi
 
-# 打印输入的分支名称
-echo "你输入的分支名称是: $TARGET_BRANCH"
+# # 打印输入的分支名称
+# echo "你输入的分支名称是: $TARGET_BRANCH"
+
+TARGET_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 # 2========切换到master分支
 echo "切换到master分支..."
