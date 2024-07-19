@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //注册微信支付 123
+    //注册微信支付 123-456
     [[MSWechatPayHelper defaultManager] initWithWeChat:@"" universalLink:@""];
     [[MSWechatPayHelper defaultManager] checkIfNeed];
     
