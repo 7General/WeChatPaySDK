@@ -79,6 +79,7 @@ echo "new-version:${build_version}"
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 echo "当前分支:${CURRENT_BRANCH}"
 echo "合并分支:$TARGET_BRANCH"
-echo "添加tag:${tag_name}"
+echo "添加tag: ${tag_name}"
+echo "Creating tag: $tag_name"
 
 echo "************rebse-info****************"
